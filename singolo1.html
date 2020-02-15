@@ -5,14 +5,14 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Singolo</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='./singolo.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='./singolo1.css'>
 </head>
 <body>
   
-  <div class="main">
+  <section class="main">
     <header>
       <div class="logo">
-        <div class="logo__title">singolo<span class="rad-text">*</span></div>
+        <a href="#" class="logo__title">singolo<span class="rad-text">*</span></a>
       </div>
 
       <nav>
@@ -20,7 +20,7 @@
           <li><a href="#" class="active">home</a></li>
 
           <span class="nav-menu__dots"></span>
-          <li><a href="#">service</a></li>
+          <li><a href="#service">service</a></li>
 
           <span class="nav-menu__dots"></span>
           <li><a href="#">portfolio</a></li>
@@ -34,9 +34,7 @@
       </nav>
     </header>
 
-    <div class="header-under-line"></div>
-
-    <div class="slider">
+    <section class="slider">
       <div class="phones">
         <div class="phones__vertical">
           <img src="./asets/iphone-vertical.png" alt="">
@@ -46,14 +44,12 @@
           <img src="./asets/iphone-horizontal.png" alt="">
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="slider-under-line"></div>
+    <section id="service" class="services">
+      <h2 class="services__title">Our Services</h2>
 
-    <div class="services">
-      <h2 class="title">Our Services</h2>
-
-      <p class="subtitle">
+      <p class="services__subtitle">
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
         Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
         eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
@@ -74,6 +70,7 @@
             </p>
           </div>
         </div>
+
         <div class="menu-list">
           <div class="menu-list__img">
             <img src="./asets/bulb.png" alt="">
@@ -88,6 +85,7 @@
             </p>
           </div>
         </div>
+
         <div class="menu-list">
           <div class="menu-list__img">
             <img src="/asets/heart.png" alt="">
@@ -102,6 +100,7 @@
             </p>
           </div>
         </div>
+
         <div class="menu-list">
           <div class="menu-list__img">
             <img src="./asets/phone.png" alt="">
@@ -116,6 +115,7 @@
             </p>
           </div>
         </div>
+
         <div class="menu-list">
           <div class="menu-list__img">
             <img src="./asets/bubble.png" alt="">
@@ -130,6 +130,7 @@
             </p>
           </div>
         </div>
+
         <div class="menu-list">
           <div class="menu-list__img">
             <img src="./asets/star.png" alt="">
@@ -145,11 +146,9 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="services-under-line"></div>
-  </div>
+    </section>
+  </section>
 
 </body>
-  <script src='main.js'></script>
+<script src='main.js'></script>
 </html>
