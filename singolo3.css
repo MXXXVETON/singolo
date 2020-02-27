@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+font-face {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.main {
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif; }
+
+.form-quote {
+  background: #f06c64;
+  padding: 62px 40px;
+  color: #f0d8d9; }
+  .form-quote h2 {
+    font-size: 30px;
+    margin-bottom: 20px; }
+  .form-quote h3 {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 20px; }
+  .form-quote .row {
+    display: flex; }
+    .form-quote .row .col {
+      display: flex;
+      flex-direction: column; }
+    .form-quote .row .col-form {
+      padding-top: 22px;
+      width: 66%; }
+    .form-quote .row .col-addres {
+      font-size: 12px;
+      letter-spacing: 0.2px;
+      width: 34%;
+      padding: 18px; }
+      .form-quote .row .col-addres h3 {
+        margin-bottom: 7px; }
+      .form-quote .row .col-addres p {
+        line-height: 1.7;
+        margin-bottom: 27px; }
+      .form-quote .row .col-addres ul {
+        display: flex;
+        flex-direction: column; }
+      .form-quote .row .col-addres li {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-bottom: 8px; }
+      .form-quote .row .col-addres i {
+        margin-left: 5px;
+        margin-right: 10px; }
+      .form-quote .row .col-addres a {
+        text-decoration: none;
+        color: #f0d8d9;
+        text-align: center;
+        margin-right: 7px; }
+  .form-quote #getQuote {
+    display: flex;
+    flex-direction: column; }
+    .form-quote #getQuote input {
+      border: none;
+      background: #d6564f;
+      border-radius: 5px;
+      height: 38px;
+      margin-bottom: 17px;
+      padding: 5px 10px; }
+      .form-quote #getQuote input::placeholder {
+        color: #f48c8f; }
+    .form-quote #getQuote textarea {
+      height: 200px;
+      border: none;
+      background: #d6564f;
+      border-radius: 5px;
+      padding: 7px 10px; }
+      .form-quote #getQuote textarea::placeholder {
+        font-family: 'Lato', sans-serif;
+        color: #f48c8f; }
+
+.under-line_pink {
+  width: 100%;
+  height: 7px;
+  background: #ea676b; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #2d303a;
+  align-items: center;
+  padding: 20px 45px 20px 45px; }
+  footer .corp {
+    font-size: 12px;
+    color: #c9c9c9; }
+
+/*# sourceMappingURL=singolo3.css.map */
