@@ -20,8 +20,8 @@ h3, .h3 {
 
 .main {
   max-width: 1020px;
-  width: 100%;
   margin: 0 auto;
+  width: 100%;
   font-family: 'Lato', sans-serif; }
 
 .portfolio {
@@ -133,10 +133,15 @@ h3, .h3 {
     }
 
   .persone-item__name {
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    margin-bottom: 5px; 
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 6px;
+
+    h3 {
+      font-weight: 600;
+      letter-spacing: 0.4px;
     }
+  }
 
   .persone-item__short-info {
     font-size: 12px;
@@ -147,13 +152,13 @@ h3, .h3 {
 
     height: 40px;
     overflow: hidden;
-    }
+  }
 
   .persone-item__social {
     width: 51%;
     display: flex;
     justify-content: space-between; 
-    }
+  }
   }
 
 .under-line {
