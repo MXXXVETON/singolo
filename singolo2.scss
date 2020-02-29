@@ -27,105 +27,144 @@ h3, .h3 {
 .portfolio {
   background: #2d303a;
   padding: 60px 40px;
-  padding-bottom: 58px; }
-  .portfolio h2 {
-    margin-bottom: 18px; }
-  .portfolio h3 {
+  padding-bottom: 58px; 
+
+  h2 {
+    margin-bottom: 18px; 
+  }
+  
+  h3 {
     font-weight: 400;
     letter-spacing: 0.2px;
-    margin-bottom: 13px; }
-  .portfolio nav {
+    margin-bottom: 13px; 
+  }
+
+  nav {
     margin-bottom: 23px;
-    padding-left: 1px; }
-    .portfolio nav .nav-links {
+    padding-left: 1px; 
+  
+    .nav-links {
       display: flex;
       flex-wrap: wrap;
       width: 31%;
       justify-content: space-between;
-      list-style: none; }
-      .portfolio nav .nav-links .active {
-        color: #c9c9c9;
-        border-color: #c9c9c9; }
-      .portfolio nav .nav-links li a {
+      list-style: none; 
+    
+      .active {
+      color: #c9c9c9;
+      border-color: #c9c9c9; 
+      }
+
+      li a {
         color: #767e9e;
         letter-spacing: 0.5;
         font-size: 12px;
         text-decoration: none;
         border: 1px solid #767e9e;
         padding: 2px 7px;
-        border-radius: 5px; }
-  .portfolio__work {
+        border-radius: 5px; 
+      }
+    }
+  }
+
+  &__work {
     color: #767e9e;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 16px 20px;
     justify-items: center;
-    margin-bottom: 5px;
-    height: 600px;
-    overflow: hidden; }
+    margin-bottom: 5px; 
 
-.about-us {
+    height: 600px;
+    overflow: hidden;
+  }
+}
+
+.about-us{
   display: flex;
   flex-direction: column;
   background: #f2f2f2;
-  padding: 60px 40px; }
-  .about-us h2 {
+  padding: 60px 40px; 
+  
+  h2 {
     padding-top: 3px;
     margin-bottom: 18px;
-    font-weight: 800; }
-  .about-us h3 {
+    font-weight: 800;
+  }
+
+  h3 {
     line-height: 1.8;
     letter-spacing: .35px;
-    margin-bottom: 44px; }
-  .about-us__persone {
+    margin-bottom: 44px; 
+  }
+
+  &__persone {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px; }
-  .about-us .persone-item__foto {
+    grid-gap: 20px; 
+  }
+
+  .persone-item__foto {
     max-height: 300px;
     min-width: 300px;
     width: 100%;
     height: 300px;
     margin-bottom: 10px;
-    overflow: hidden; }
-    .about-us .persone-item__foto_adam-jensen {
-      background-image: url("./asets/photo/photo-1.png");
-      background-repeat: no-repeat;
-      background-position: center; }
-    .about-us .persone-item__foto_desmond-miles {
-      background-image: url("./asets/photo/photo-2.png");
-      background-repeat: no-repeat;
-      background-position: center; }
-    .about-us .persone-item__foto_scolara-visari {
-      background-image: url("./asets/photo/photo.png");
-      background-repeat: no-repeat;
-      background-position: center; }
-  .about-us .persone-item__name {
+    overflow: hidden; 
+
+      &_adam-jensen {
+        background-image: url("./asets/photo/photo-1.png");
+        background-repeat: no-repeat;
+        background-position: center; 
+      }
+
+      &_desmond-miles {
+        background-image: url("./asets/photo/photo-2.png");
+        background-repeat: no-repeat;
+        background-position: center; 
+      }
+
+      &_scolara-visari {
+        background-image: url("./asets/photo/photo.png");
+        background-repeat: no-repeat;
+        background-position: center; 
+      }
+    }
+
+  .persone-item__name {
     font-weight: 600;
     letter-spacing: 0.4px;
-    margin-bottom: 5px; }
-  .about-us .persone-item__short-info {
+    margin-bottom: 5px; 
+    }
+
+  .persone-item__short-info {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.7;
     margin-bottom: 24px;
     color: #767e9e;
+
     height: 40px;
-    overflow: hidden; }
-  .about-us .persone-item__social {
+    overflow: hidden;
+    }
+
+  .persone-item__social {
     width: 51%;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between; 
+    }
+  }
 
 .under-line {
   width: 100%;
-  height: 7px; }
+  height: 7px; 
+}
 
 .under-line_blue {
-  background: #323746; }
+  background: #323746; 
+}
 
 .under-line_white {
-  background: #fff; }
-
-/*# sourceMappingURL=singolo2.css.map */
+  background: #fff; 
+}
