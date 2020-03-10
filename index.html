@@ -304,14 +304,15 @@
 
       <div class="row">
         <div class="col col-form">
-          <form id="getQuote" action="">
-            <input placeholder="Name (Required)" type="text">
 
-            <input placeholder="Email (Required)" type="text">
+          <form id="getQuote" action="#" method="POST">
+            <input  type="text" name="name" required pattern="[A-Za-zА-Яа-яЁё\s]+"placeholder="Name (Required)">
 
-            <input placeholder="Subject (Required)" type="text">
+            <input  type="email" name="email" requiredpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email (Required)">
 
-            <textarea placeholder="Describe your project in detail..." type="text"></textarea>
+            <input  type="text" name="subject" placeholder="Subject">
+            
+            <textarea  name="describe" placeholder="Describe your project in detail..." cols="30" rows="10"></textarea>
 
             <button class="submit-btn">Submit</button>
           </form>
@@ -327,11 +328,11 @@
           </p>
 
           <ul>
-            <li><a href="#"><i class="fas fa-map-marker-alt"></i>Elm St. 14/05 Lost City </a></li>
+            <li><span class="form__img-location"><img src="./asets/icon/location.png" alt="location"></span> Elm St. 14/05 Lost City</li>
 
-            <li><a href="tel:03528 331 86 35"><i class="fas fa-phone"></i>03528 331 86 35</a></li>
+            <li><a href="tel:03528 331 86 35"><span class="form__img-phoone"><img src="./asets/icon/phoneicon.png" alt="phone"></span> 03528 331 86 35</a></li>
 
-            <li><a href="mailto:info@singolo.com"><i class="fas fa-envelope"></i>info@singolo.com</a></li>
+            <li><a href="mailto:info@singolo.com"><span class="form__img-mail"><img src="./asets/icon/mail.png" alt="mail"></span> info@singolo.com</a></li>
           </ul>
         </div>
       </div>

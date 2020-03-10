@@ -36,7 +36,8 @@ p {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.7;
-  letter-spacing: 0.7px; }
+  letter-spacing: 0.7px;
+  text-align: justify; }
 
 header {
   display: -webkit-box;
@@ -64,7 +65,7 @@ header {
       font-weight: 700;
       line-height: 6px; }
   header nav {
-    width: 40%;
+    width: 374px;
     text-transform: uppercase;
     font-size: 18px; }
     header nav .nav-menu {
@@ -154,7 +155,8 @@ header {
           flex-direction: column;
   border-bottom: 7px solid #ffffff;
   color: #767e9e;
-  padding: 0 40px; }
+  padding: 0 40px;
+  margin-bottom: 15px; }
   .services h2, .services h3 {
     color: #666d89; }
   .services__title {
@@ -164,11 +166,12 @@ header {
     margin-bottom: 35px;
     font-size: 16px;
     line-height: 1.9;
-    letter-spacing: 0.2; }
+    letter-spacing: 0.2;
+    text-align: justify; }
   .services__menu {
     display: grid;
     grid-template: 100px 100px/ 1fr 1fr 1fr;
-    gap: 25px 25px;
+    gap: 26px 19px;
     margin-top: 10px;
     margin-bottom: 35px; }
   .services .menu-list {
@@ -193,17 +196,19 @@ header {
       height: 60px;
       margin-right: 15px; }
     .services .menu-list__content {
-      word-wrap: break-word; }
+      word-wrap: break-word;
+      padding-left: 4px; }
       .services .menu-list__content h3 {
         margin-bottom: 10px; }
       .services .menu-list__content p {
         font-size: 13px;
-        line-height: 1.8; }
+        line-height: 1.6;
+        letter-spacing: -0.3px; }
 
 .portfolio {
   background: #2d303a;
-  padding: 60px 40px;
-  padding-bottom: 58px; }
+  padding: 70px 40px;
+  padding-bottom: 60px; }
   .portfolio h2, .portfolio .h3 {
     font-size: 30px;
     color: #767e9e; }
@@ -213,7 +218,7 @@ header {
     font-weight: 400;
     line-height: 1.6; }
   .portfolio h2 {
-    margin-bottom: 18px; }
+    margin-bottom: 26px; }
   .portfolio h3 {
     font-weight: 400;
     letter-spacing: 0.2px;
@@ -243,6 +248,9 @@ header {
         border: 1px solid #767e9e;
         padding: 2px 7px;
         border-radius: 5px; }
+        .portfolio nav .nav-links li a:hover {
+          color: #c9c9c9;
+          border-color: #c9c9c9; }
   .portfolio__work {
     color: #767e9e;
     display: grid;
@@ -263,7 +271,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #f2f2f2;
-  padding: 60px 40px; }
+  padding: 66px 40px; }
   .about-us h2, .about-us .h3 {
     font-size: 30px;
     color: #767e9e; }
@@ -274,12 +282,13 @@ header {
     line-height: 1.6; }
   .about-us h2 {
     padding-top: 3px;
-    margin-bottom: 18px;
+    margin-bottom: 26px;
     font-weight: 800; }
   .about-us h3 {
     line-height: 1.8;
     letter-spacing: .35px;
-    margin-bottom: 44px; }
+    margin-bottom: 44px;
+    text-align: justify; }
   .about-us__persone {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -289,7 +298,7 @@ header {
     min-width: 300px;
     width: 100%;
     height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     overflow: hidden; }
     .about-us .persone-item__foto_adam-jensen {
       background-image: url("./asets/photo/photo-1.png");
@@ -316,6 +325,8 @@ header {
     line-height: 1.7;
     margin-bottom: 24px;
     color: #767e9e;
+    text-align: justify;
+    letter-spacing: 0px;
     height: 40px;
     overflow: hidden; }
   .about-us .persone-item__social {
@@ -339,16 +350,19 @@ header {
 
 .form-quote {
   background: #f06c64;
-  padding: 62px 40px;
+  padding: 72px 40px;
+  padding-bottom: 5px;
   color: #f0d8d9; }
   .form-quote h2 {
     font-size: 30px;
-    margin-bottom: 20px; }
+    margin-bottom: 28px; }
   .form-quote h3 {
     font-size: 18px;
     line-height: 1.6;
     font-weight: 400;
-    margin-bottom: 20px; }
+    margin-bottom: 25px;
+    text-align: justify;
+    letter-spacing: -0.3px; }
   .form-quote .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -370,10 +384,13 @@ header {
       width: 34%;
       padding: 18px; }
       .form-quote .row .col-addres h3 {
-        margin-bottom: 7px; }
+        margin-bottom: 0; }
       .form-quote .row .col-addres p {
-        line-height: 1.7;
-        margin-bottom: 27px; }
+        line-height: 1.8;
+        text-align: justify;
+        letter-spacing: -0.2px;
+        margin-bottom: 27px;
+        font-size: 12px; }
       .form-quote .row .col-addres ul {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -382,6 +399,13 @@ header {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
+        .form-quote .row .col-addres ul .form__img-location {
+          padding-left: 3px;
+          margin-right: 8px; }
+        .form-quote .row .col-addres ul .form__img-phoone {
+          margin-right: 5px; }
+        .form-quote .row .col-addres ul .form__img-mail {
+          margin-right: 5px; }
       .form-quote .row .col-addres li {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -406,13 +430,18 @@ header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    color: #c9c9c9; }
+    .form-quote #getQuote input[type=text],
+    .form-quote #getQuote input[type=email],
+    .form-quote #getQuote textarea[name=describe] {
+      color: #f48c8f; }
     .form-quote #getQuote input {
       border: none;
       background: #d6564f;
       border-radius: 5px;
       height: 38px;
-      margin-bottom: 17px;
+      margin-bottom: 16px;
       padding: 5px 10px; }
       .form-quote #getQuote input::-webkit-input-placeholder {
         color: #f48c8f; }
@@ -428,24 +457,7 @@ header {
       background: #d6564f;
       border-radius: 5px;
       padding: 7px 10px;
-      margin-bottom: 16px;
-    }
-
-    button.submit-btn {
-      height: 36px;
-      width: 200px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 12px;
-      font-family: "Lato", sans-serif;
-      background-color: #d6564f;
-      letter-spacing: -0.02px;
-      text-transform: uppercase;
-      color: #f48c8f;
-      outline: none;
-    }
+      margin-bottom: 17px; }
       .form-quote #getQuote textarea::-webkit-input-placeholder {
         font-family: 'Lato', sans-serif;
         color: #f48c8f; }
@@ -458,6 +470,15 @@ header {
       .form-quote #getQuote textarea::placeholder {
         font-family: 'Lato', sans-serif;
         color: #f48c8f; }
+    .form-quote #getQuote .submit-btn {
+      width: 200px;
+      border: none;
+      text-transform: uppercase;
+      padding: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #d6564f;
+      color: #f48c8f; }
 
 .under-line_pink {
   width: 100%;
@@ -476,8 +497,17 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 45px 20px 45px; }
+  footer .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 157px;
+    position: relative;
+    right: -7px; }
   footer .corp {
     font-size: 12px;
     color: #666d89; }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
