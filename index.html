@@ -6,22 +6,23 @@
   <title>Singolo</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
-  <script src='main.js'></script>
 </head>
 <body>
   
   <section class="main">
     <header>
       <div class="logo">
-        <a href="#" class="logo__title">singolo<span class="rad-text">*</span></a>
+        <h1 class="logo__title">
+          <a href="#" >singolo<span class="rad-text">*</span></a>
+        </h1>
       </div>
 
       <nav>
-        <ul class="nav-menu">
+        <ul id="menu" class="nav-menu">
           <li><a href="#" class="active">home</a></li>
 
           <span class="nav-menu__dots"></span>
-          <li><a href="#service">service</a></li>
+          <li><a href="#service">services</a></li>
 
           <span class="nav-menu__dots"></span>
           <li><a href="#">portfolio</a></li>
@@ -46,6 +47,8 @@
         </div>
       </div>
     </section>
+
+    <!-- <div class="under-line under-line_pink"></div> -->
 
     <section id="service" class="services">
       <h2 class="services__title">Our Services</h2>
@@ -108,7 +111,7 @@
           </div>
 
           <div class="menu-list__content">
-            <h3>Responsive Layout</h3>
+            <h3 class="fixedpp">Responsive Layout</h3>
 
             <p>
               Sed porttitor placerat rhoncus. In at nunc tellus. 
@@ -123,7 +126,7 @@
           </div>
 
           <div class="menu-list__content">
-            <h3>24 / 7 Support</h3>
+            <h3 class="fixedpp">24 / 7 Support</h3>
 
             <p>
               Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. 
@@ -138,7 +141,7 @@
           </div>
 
           <div class="menu-list__content">
-            <h3>Feel Like A Star</h3>
+            <h3 class="fixedpast">Feel Like A Star</h3>
 
             <p>
               Quisque hendrerit purus dapibus, ornare nibh vitae, 
@@ -367,6 +370,6 @@
     <div class="under-line under-line_white"></div>
 <!-- Main -->
   </section>
-
 </body>
+<script src='./main.js'></script>
 </html>

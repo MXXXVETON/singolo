@@ -13,20 +13,17 @@
   margin: 0 auto;
   font-family: 'Lato', sans-serif; }
 
-h1, .h1 {
-  font-size: 30px;
-  line-height: 18px;
-  font-weight: 900; }
-
 h2, .h2 {
   font-size: 30px;
   line-height: 18px;
-  font-weight: 900; }
+  font-weight: 900;
+  letter-spacing: -0.4px; }
 
 h3, .h3 {
   font-size: 18px;
   line-height: 18px;
-  font-weight: 900; }
+  font-weight: 900;
+  letter-spacing: -0.4px; }
 
 a {
   text-decoration: none;
@@ -54,16 +51,20 @@ header {
   font-weight: 700;
   height: 95px;
   padding: 0 38px;
-  padding-top: 10px;
+  padding-top: 5px;
   border-bottom: 7px solid #323746; }
   header .logo {
     width: 50%;
     text-transform: uppercase; }
     header .logo__title {
-      color: #ffffff;
+      padding-left: 1px;
+      margin-top: -4px;
+      letter-spacing: -0.4px;
       font-size: 25px;
       font-weight: 700;
       line-height: 6px; }
+      header .logo__title a {
+        color: #ffffff; }
   header nav {
     width: 374px;
     text-transform: uppercase;
@@ -106,7 +107,6 @@ header {
   display: flex;
   position: relative;
   height: 600px;
-  margin-bottom: 70px;
   border-bottom: #ea676b 5px solid; }
   .slider::before, .slider::after {
     content: '';
@@ -141,9 +141,11 @@ header {
         -ms-flex-align: center;
             align-items: center; }
     .slider .phones__horizontal {
-      padding-left: 55px; }
+      padding-left: 55px;
+      margin-bottom: 3px; }
     .slider .phones__vertical {
-      padding-right: 15px; }
+      padding-right: 18px;
+      margin-bottom: 3px; }
 
 .services {
   display: -webkit-box;
@@ -156,18 +158,20 @@ header {
   border-bottom: 7px solid #ffffff;
   color: #767e9e;
   padding: 0 40px;
-  margin-bottom: 15px; }
+  padding-top: 70px;
+  margin-bottom: 14px;
+  background: #f2f2f2; }
   .services h2, .services h3 {
     color: #666d89; }
   .services__title {
     margin-bottom: 25px; }
   .services__subtitle {
+    text-align: justify;
+    letter-spacing: 0.5px;
     font-weight: 400;
     margin-bottom: 35px;
     font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.2;
-    text-align: justify; }
+    line-height: 1.9; }
   .services__menu {
     display: grid;
     grid-template: 100px 100px/ 1fr 1fr 1fr;
@@ -199,7 +203,14 @@ header {
       word-wrap: break-word;
       padding-left: 4px; }
       .services .menu-list__content h3 {
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        letter-spacing: -0.1px; }
+      .services .menu-list__content h3.fixedpp {
+        letter-spacing: -0.1px;
+        margin-top: -3px; }
+      .services .menu-list__content h3.fixedpast {
+        letter-spacing: 0px;
+        margin-top: -3.4px; }
       .services .menu-list__content p {
         font-size: 13px;
         line-height: 1.6;
@@ -232,7 +243,7 @@ header {
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      width: 31%;
+      width: 287px;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -242,11 +253,11 @@ header {
         border-color: #c9c9c9; }
       .portfolio nav .nav-links li a {
         color: #767e9e;
-        letter-spacing: 0.5;
-        font-size: 12px;
+        letter-spacing: 0.5px;
+        font-size: 11px;
         text-decoration: none;
         border: 1px solid #767e9e;
-        padding: 2px 7px;
+        padding: 3px 5px;
         border-radius: 5px; }
         .portfolio nav .nav-links li a:hover {
           color: #c9c9c9;
@@ -271,24 +282,22 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #f2f2f2;
-  padding: 66px 40px; }
-  .about-us h2, .about-us .h3 {
+  padding: 65px 40px 71px; }
+  .about-us h2 {
+    color: #767e9e;
+    padding-top: 3px;
+    margin-bottom: 26px;
+    font-weight: 800;
+    font-size: 30px; }
+  .about-us h3 {
     font-size: 30px;
-    color: #767e9e; }
-  .about-us h3, .about-us .h3 {
     color: #767e9e;
     font-size: 17px;
     font-weight: 400;
-    line-height: 1.6; }
-  .about-us h2 {
-    padding-top: 3px;
-    margin-bottom: 26px;
-    font-weight: 800; }
-  .about-us h3 {
     line-height: 1.8;
-    letter-spacing: .35px;
     margin-bottom: 44px;
-    text-align: justify; }
+    text-align: justify;
+    letter-spacing: 0.2px; }
   .about-us__persone {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -326,7 +335,7 @@ header {
     margin-bottom: 24px;
     color: #767e9e;
     text-align: justify;
-    letter-spacing: 0px;
+    letter-spacing: -0.1px;
     height: 40px;
     overflow: hidden; }
   .about-us .persone-item__social {
@@ -350,7 +359,7 @@ header {
 
 .form-quote {
   background: #f06c64;
-  padding: 72px 40px;
+  padding: 68px 40px;
   padding-bottom: 5px;
   color: #f0d8d9; }
   .form-quote h2 {
@@ -384,12 +393,14 @@ header {
       width: 34%;
       padding: 18px; }
       .form-quote .row .col-addres h3 {
-        margin-bottom: 0; }
+        margin-top: -3px;
+        letter-spacing: 0.3px;
+        margin-bottom: 5px; }
       .form-quote .row .col-addres p {
         line-height: 1.8;
         text-align: justify;
         letter-spacing: -0.2px;
-        margin-bottom: 27px;
+        margin-bottom: 26px;
         font-size: 12px; }
       .form-quote .row .col-addres ul {
         display: -webkit-box;
@@ -401,11 +412,11 @@ header {
                 flex-direction: column; }
         .form-quote .row .col-addres ul .form__img-location {
           padding-left: 3px;
-          margin-right: 8px; }
+          margin-right: 14px; }
         .form-quote .row .col-addres ul .form__img-phoone {
-          margin-right: 5px; }
+          margin-right: 10px; }
         .form-quote .row .col-addres ul .form__img-mail {
-          margin-right: 5px; }
+          margin-right: 8px; }
       .form-quote .row .col-addres li {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -414,7 +425,7 @@ header {
             -ms-flex-align: center;
                 align-items: center;
         list-style: none;
-        margin-bottom: 8px; }
+        margin-bottom: 6px; }
       .form-quote .row .col-addres i {
         margin-left: 5px;
         margin-right: 10px; }
@@ -441,8 +452,10 @@ header {
       background: #d6564f;
       border-radius: 5px;
       height: 38px;
+      font-size: 10px;
+      letter-spacing: 0.8px;
       margin-bottom: 16px;
-      padding: 5px 10px; }
+      padding: 5px 14px; }
       .form-quote #getQuote input::-webkit-input-placeholder {
         color: #f48c8f; }
       .form-quote #getQuote input:-ms-input-placeholder {
@@ -456,8 +469,10 @@ header {
       border: none;
       background: #d6564f;
       border-radius: 5px;
-      padding: 7px 10px;
-      margin-bottom: 17px; }
+      font-size: 10px;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+      padding: 10px 14px; }
       .form-quote #getQuote textarea::-webkit-input-placeholder {
         font-family: 'Lato', sans-serif;
         color: #f48c8f; }
@@ -503,11 +518,13 @@ footer {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 157px;
+    width: 158px;
     position: relative;
     right: -7px; }
   footer .corp {
     font-size: 12px;
-    color: #666d89; }
+    color: #666d89;
+    position: relative;
+    left: -5px; }
 
 /*# sourceMappingURL=style.css.map */
