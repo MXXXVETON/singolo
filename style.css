@@ -101,38 +101,41 @@ header {
   header .rad-text {
     color: #f06c64; }
 
-.slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.corusel-container {
+  width: 1020px;
   position: relative;
-  height: 600px;
-  border-bottom: #ea676b 5px solid; }
-  .slider::before, .slider::after {
-    content: '';
+  border-bottom: #ea666b 5px solid;
+  overflow: hidden; }
+  .corusel-container .corusel-slide {
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    height: 600px; }
+  .corusel-container .item {
+    float: left; }
+  .corusel-container .arrow-back,
+  .corusel-container .arrow-next {
     position: absolute;
     width: 20px;
     height: 40px;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
+    z-index: 10;
     cursor: pointer; }
-  .slider::before {
+  .corusel-container .arrow-back {
     left: 40px;
     background-image: url("./asets/left-arrow.png");
     background-repeat: no-repeat;
     background-position: center; }
-  .slider::after {
+  .corusel-container .arrow-next {
     right: 38px;
     background-image: url("./asets/right-arrow.png");
     background-repeat: no-repeat;
     background-position: center; }
-  .slider .oversection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .slider .phones {
+  .corusel-container .phones {
     width: 1020px;
+    height: 100%;
     background: #f06c64;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -143,12 +146,100 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .slider .phones__horizontal {
+    .corusel-container .phones__horizontal {
+      position: relative;
       padding-left: 55px;
       margin-bottom: 3px; }
-    .slider .phones__vertical {
+      .corusel-container .phones__horizontal .blackscreen_h {
+        width: 195px;
+        height: 336px;
+        position: absolute;
+        right: 160px;
+        top: -58px;
+        background: black;
+        z-index: 99;
+        visibility: visible;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg); }
+      .corusel-container .phones__horizontal #home_horizontal {
+        position: absolute;
+        z-index: 99;
+        top: 85px;
+        left: 62px;
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%; }
+    .corusel-container .phones__vertical {
+      position: relative;
       padding-right: 18px;
       margin-bottom: 3px; }
+      .corusel-container .phones__vertical .blackscreen {
+        width: 195px;
+        height: 336px;
+        position: absolute;
+        left: 10px;
+        top: 63px;
+        background: black;
+        z-index: 99;
+        visibility: visible; }
+      .corusel-container .phones__vertical #home {
+        position: absolute;
+        z-index: 99;
+        bottom: 35px;
+        left: 85px;
+        cursor: pointer;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%; }
+  .corusel-container .blue-screen {
+    width: 1020px;
+    height: 100%;
+    background: #648BF0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
+    .corusel-container .blue-screen .phones-left {
+      position: absolute;
+      top: 161px;
+      left: 243px; }
+    .corusel-container .blue-screen .phones-center {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0%);
+              transform: translate(-50%, 0%); }
+      .corusel-container .blue-screen .phones-center .blackscreen_blue-h {
+        width: 205px;
+        height: 363px;
+        position: absolute;
+        left: 13px;
+        top: 63px;
+        background: black;
+        z-index: 99;
+        visibility: visible; }
+      .corusel-container .blue-screen .phones-center #home-btn {
+        position: absolute;
+        z-index: 99;
+        bottom: 35px;
+        left: 90px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; }
+    .corusel-container .blue-screen .phones-right {
+      position: absolute;
+      top: 160px;
+      right: 251px; }
+  .corusel-container .active {
+    visibility: hidden !important; }
 
 .services {
   display: -webkit-box;
