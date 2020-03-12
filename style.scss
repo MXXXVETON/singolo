@@ -155,9 +155,12 @@ header {
     background-position: center;
   }
 
+  .oversection{
+    display: flex;
+  }
+
   .phones {
-    width: 100%;
-    max-width: 1020px;
+    width: 1020px;
     background: #f06c64;
     display: flex;
     justify-content: center;
@@ -183,7 +186,7 @@ header {
   color: #767e9e;
   padding: 0 40px;
   padding-top: 70px;
-  margin-bottom: 14px;
+  padding-bottom: 14px;
   background: #f2f2f2;
 
   h2, h3 {
