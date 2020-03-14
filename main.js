@@ -1,6 +1,5 @@
 //menu turn-off links or btn
 const MENU = document.getElementById('menu');
-const MENUPORTFOLIO = document.getElementById('menu-portfolio');
 
 MENU.addEventListener('click', (event)=>{
   MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
@@ -8,11 +7,7 @@ MENU.addEventListener('click', (event)=>{
   event.target.classList.add('active')
 });
 
-MENUPORTFOLIO.addEventListener('click', (event)=>{
-  MENUPORTFOLIO.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
 
-  event.target.classList.add('active')
-});
 
 // SLIDER
 const couruselOffsets = document.querySelector('.corusel-container').offsetWidth;
