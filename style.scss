@@ -408,6 +408,16 @@ header {
       border: 1px solid #767E9E;
       border-radius: 5px;
       padding: 4px 6px;
+
+      &:hover {
+        border-color: #BBBBBB;
+        color: #BBBBBB;
+      }
+    }
+
+    .active {
+      border-color: #BBBBBB;
+      color: #BBBBBB;
     }
   }
 

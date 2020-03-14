@@ -346,6 +346,12 @@ header {
       border: 1px solid #767E9E;
       border-radius: 5px;
       padding: 4px 6px; }
+      .portfolio__tags-menu .tag:hover {
+        border-color: #BBBBBB;
+        color: #BBBBBB; }
+    .portfolio__tags-menu .active {
+      border-color: #BBBBBB;
+      color: #BBBBBB; }
   .portfolio__work {
     display: grid;
     grid-template-rows: auto;

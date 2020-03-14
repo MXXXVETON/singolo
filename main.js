@@ -1,8 +1,15 @@
 //menu turn-off links or btn
 const MENU = document.getElementById('menu');
+const TAGSMENU = document.querySelector('.portfolio__tags-menu')
 
 MENU.addEventListener('click', (event)=>{
   MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
+
+  event.target.classList.add('active')
+});
+
+TAGSMENU.addEventListener('click', (event)=>{
+  TAGSMENU.querySelectorAll('span').forEach(el => el.classList.remove('active'))
 
   event.target.classList.add('active')
 });
