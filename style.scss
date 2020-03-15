@@ -66,7 +66,6 @@ p {
   background: #fff; 
 }
 
-
 header {
   display: flex;
   align-items: center;
@@ -210,7 +209,7 @@ header {
         top: -58px;
         background: black;
         z-index: 99;
-        visibility: visible;
+        visibility: hidden;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
      }
@@ -224,6 +223,10 @@ header {
         width: 45px;
         height: 45px;
         border-radius: 50%;
+      }
+
+      .active {
+        visibility: visible;
       }
     }
 
@@ -240,7 +243,7 @@ header {
         top: 63px;
         background: black;
         z-index: 99;
-        visibility: visible;
+        visibility: hidden;
        }
 
        #home {
@@ -252,6 +255,10 @@ header {
         width: 45px;
         height: 45px;
         border-radius: 50%;
+      }
+
+      .active {
+        visibility: visible;
       }
     }
   }
@@ -285,7 +292,7 @@ header {
         top: 63px;
         background: black;
         z-index: 99;
-        visibility: visible;
+        visibility: hidden;
       }
 
       #home-btn{
@@ -298,6 +305,10 @@ header {
         height: 50px;
         border-radius: 50%;
       }
+
+      .active {
+        visibility: visible;
+      }
     }
 
     .phones-right{
@@ -305,10 +316,6 @@ header {
       top: 160px;
       right: 251px;
     }
-  }
-
-  .active {
-    visibility: hidden !important;
   }
 }
 
@@ -410,6 +417,7 @@ header {
       padding: 4px 6px;
 
       &:hover {
+        cursor: pointer;
         border-color: #BBBBBB;
         color: #BBBBBB;
       }
@@ -429,7 +437,6 @@ header {
     justify-items: center;
     height: 600px;
     overflow: hidden;
-    // margin-bottom: 0px;
   }
 }
 
@@ -438,7 +445,6 @@ header {
   flex-direction: column;
   background: #f2f2f2;
 
-// zamena padinga na obshi
   padding: 0 40px;
   padding-top: 60px;
   padding-bottom: 69px;

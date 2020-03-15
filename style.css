@@ -177,7 +177,7 @@ header {
         top: -58px;
         background: black;
         z-index: 99;
-        visibility: visible;
+        visibility: hidden;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg); }
       .corusel-container .phones__horizontal #home_horizontal {
@@ -189,6 +189,8 @@ header {
         width: 45px;
         height: 45px;
         border-radius: 50%; }
+      .corusel-container .phones__horizontal .active {
+        visibility: visible; }
     .corusel-container .phones__vertical {
       position: relative;
       padding-right: 18px;
@@ -201,7 +203,7 @@ header {
         top: 63px;
         background: black;
         z-index: 99;
-        visibility: visible; }
+        visibility: hidden; }
       .corusel-container .phones__vertical #home {
         position: absolute;
         z-index: 99;
@@ -211,6 +213,8 @@ header {
         width: 45px;
         height: 45px;
         border-radius: 50%; }
+      .corusel-container .phones__vertical .active {
+        visibility: visible; }
   .corusel-container .blue-screen {
     width: 1020px;
     height: 100%;
@@ -243,7 +247,7 @@ header {
         top: 63px;
         background: black;
         z-index: 99;
-        visibility: visible; }
+        visibility: hidden; }
       .corusel-container .blue-screen .phones-center #home-btn {
         position: absolute;
         z-index: 99;
@@ -253,12 +257,12 @@ header {
         width: 50px;
         height: 50px;
         border-radius: 50%; }
+      .corusel-container .blue-screen .phones-center .active {
+        visibility: visible; }
     .corusel-container .blue-screen .phones-right {
       position: absolute;
       top: 160px;
       right: 251px; }
-  .corusel-container .active {
-    visibility: hidden !important; }
 
 .services {
   display: -webkit-box;
@@ -347,6 +351,7 @@ header {
       border-radius: 5px;
       padding: 4px 6px; }
       .portfolio__tags-menu .tag:hover {
+        cursor: pointer;
         border-color: #BBBBBB;
         color: #BBBBBB; }
     .portfolio__tags-menu .active {

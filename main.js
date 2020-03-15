@@ -1,15 +1,9 @@
 //menu turn-off links or btn
 const MENU = document.getElementById('menu');
-const TAGSMENU = document.querySelector('.portfolio__tags-menu')
+// const TAGSMENU = document.querySelector('.portfolio__tags-menu')
 
 MENU.addEventListener('click', (event)=>{
   MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
-
-  event.target.classList.add('active')
-});
-
-TAGSMENU.addEventListener('click', (event)=>{
-  TAGSMENU.querySelectorAll('span').forEach(el => el.classList.remove('active'))
 
   event.target.classList.add('active')
 });
@@ -44,8 +38,9 @@ HOME_BTN.addEventListener('click', (e)=> {
 })
 
 // counter
-let widthArr = [0]; 
-let lineWidth = 0; 
+let widthArr = [0];
+let lineWidth = 0;
+
 for(let i = 0; i < coruselItem.length; i++){
   widthArr.push(coruselItem[i].offsetWidth)
   lineWidth+=coruselItem[i].offsetWidth
@@ -55,10 +50,10 @@ for(let i = 0; i < coruselItem.length; i++){
 coruselLine.style.width = lineWidth+'px'
 
 let offset = 0;
-let step = 0;
+let step = 1;
 let ostatok = 0;
 
-NEXTARROW.addEventListener('click', (e) => {
+NEXTARROW.addEventListener('click', function () {
     ostatok = lineWidth-couruselOffsets - (offset + widthArr[step])
 
     if ( ostatok >= 0 ) {
@@ -69,22 +64,21 @@ NEXTARROW.addEventListener('click', (e) => {
       offset = 0;
       step = 0
     }
+
     if(step +1 == coruselItem.length){
       step =0
       offset=0
     } else{step ++}
 })
 
-BACKARROW.addEventListener('click', (e) => {
+BACKARROW.addEventListener('click', function () {
   ostatok = lineWidth-couruselOffsets + (offset - widthArr[step])
 
   if ( ostatok != 0 ) {
     offset = offset+widthArr[step]
     coruselLine.style.left = offset+'px'
-    step--
   }
 })
-
 
 
 
