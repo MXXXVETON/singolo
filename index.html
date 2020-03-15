@@ -335,13 +335,13 @@
         <div class="col col-form">
 
           <form id="getQuote" action="#" method="POST">
-            <input  type="text" name="name" required pattern="[A-Za-zА-Яа-яЁё\s]+"placeholder="Name (Required)">
+            <input value="" type="text" id="name" name="name" required pattern="[A-Za-zА-Яа-яЁё\s]+"placeholder="Name (Required)">
 
-            <input  type="email" name="email" requiredpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email (Required)">
+            <input value="" type="email" id="email" name="email" requiredpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email (Required)">
 
-            <input  type="text" name="subject" placeholder="Subject">
+            <input value="" type="text" id="subject" name="subject" placeholder="Subject">
             
-            <textarea  name="describe" placeholder="Describe your project in detail..." cols="30" rows="10"></textarea>
+            <textarea aria-valuetext="" id="describe" name="describe" placeholder="Describe your project in detail..." cols="30" rows="10"></textarea>
 
             <button class="submit-btn">Submit</button>
           </form>
@@ -400,6 +400,12 @@
         </span>
       </div>
     </footer>
+
+    <div class="overlay">
+      <div class="modal">
+        <!-- JS rendor -->
+      </div>
+    </div>
 
 <!-- Main -->
   </section>

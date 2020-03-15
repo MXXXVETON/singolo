@@ -3,6 +3,7 @@
 
 @font-face {
   font-family: 'Lato', sans-serif;
+  src: format();
 }
 
 *{
@@ -687,5 +688,54 @@ footer {
     color: #666d89;
     position: relative;
     left: -5px;
+  }
+}
+
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: .9;
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 340px;
+    max-width: 500px;
+    min-height: 200px;
+    background: #ccc;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 22px;
+    padding-bottom: 50px;
+  
+    
+    p {
+      font-size: 15px;
+      color: #0c0d0e;
+      text-align: justify;
+      word-break: break-word;
+    }
+
+    &__mail-text {
+      height: 200px;
+      overflow-y: scroll;
+    }
+  }
+
+  #modal__btn {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
   }
 }

@@ -6,15 +6,21 @@ window.onload = function() {
   rendorPartfolioItem()
 }
 
+// potfolio, portfolio TAGS, portfolio item...
 const addTagsClickHandler = () => {
   document.querySelector('.portfolio__tags-menu').addEventListener('click', (e) => {
     if( e.target.classList.contains('tag') ) {
       let clickedTag = e.target
       removeSelectedTags()
       addClickedTag(clickedTag)
-      
       rendorRandomPartfolio()
     }
+  })
+
+// MODAL
+  document.querySelector('.submit-btn').addEventListener('click', (e) => {
+    e.preventDefault()
+    onSubmitGetValue()
   })
 }
 
@@ -107,3 +113,37 @@ const addNewWorkList =  (arrayWithImagePath) => {
   })
 }
 
+// form , modal window
+const onSubmitGetValue = () => {
+  let formDataSubject = document.querySelector("#subject").value
+  let formDataText = document.querySelector("#describe").value
+  let modal = document.querySelector('.modal')
+
+  while(modal.firstChild) {
+    modal.removeChild(modal.firstChild);
+  }
+
+  if (formDataSubject === '') {
+    formDataSubject = 'Без темы'
+  } else {formDataSubject}
+
+  if (formDataText === '') {
+    formDataText = 'Без описания'
+  } else {formDataText}
+
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__aception">Письмо отправлено</p> <br>`)
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-title">Тема: ${formDataSubject}</p>`)
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-text">Описание: ${formDataText}</p>`)
+  modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`)
+
+
+  document.querySelector('.overlay').style.visibility = 'visible'
+  
+
+  document.querySelector('#modal__btn').addEventListener('click', () => {
+    document.querySelector('.overlay').style.visibility = 'hidden'
+    document.body.style.overflow = 'auto'
+  })
+
+  document.body.style.overflow = 'hidden'
+}
