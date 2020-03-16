@@ -1,9 +1,98 @@
 window.onload = function() {
+  // Main menu
+  addNavClickHandler()
+
+  // Courusel
+  addCourusel()
+
   // TAGS
   addTagsClickHandler()
 
-  // PORTFOLIO TABS
+  // PORTFOLIO rendor content 0
   rendorPartfolioItem()
+
+  addBorderByItem()
+}
+
+// Main menu
+const addNavClickHandler = () => {
+  const MENU = document.querySelector('#menu')
+
+  MENU.addEventListener('click', (e) => {
+    MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
+    e.target.classList.add('active')
+  })
+}
+
+// Courusel
+const addCourusel = () => {
+  const couruselOffsets = document.querySelector('.corusel-container').offsetWidth;
+  const coruselLine = document.querySelector('.corusel-slide');
+  const coruselItem = document.querySelectorAll('.item');
+  
+  // btn
+  const BACKARROW = document.querySelector('.arrow-back')
+  const NEXTARROW =document.querySelector('.arrow-next')
+  const HOME = document.querySelector('#home')
+  const HOME_HORIZONTAL = document.querySelector('#home_horizontal')
+  const BLACKSCREEN = document.querySelector('.blackscreen')
+  const BLACKSCREEN_H = document.querySelector('.blackscreen_h')
+  const HOME_BTN = document.querySelector('#home-btn')
+  const BLACKSCREEN_H2 = document.querySelector('.blackscreen_blue-h')
+  
+  HOME.addEventListener('click', (e)=> {
+    BLACKSCREEN.classList.toggle('active')
+  })
+  
+  HOME_HORIZONTAL.addEventListener('click', (e)=> {
+    BLACKSCREEN_H.classList.toggle('active')
+  })
+  
+  HOME_BTN.addEventListener('click', (e)=> {
+    BLACKSCREEN_H2.classList.toggle('active')
+  })
+  
+  // counter
+  let widthArr = [0];
+  let lineWidth = 0;
+  
+  for(let i = 0; i < coruselItem.length; i++){
+    widthArr.push(coruselItem[i].offsetWidth)
+    lineWidth+=coruselItem[i].offsetWidth
+  } 
+  
+  coruselLine.style.width = lineWidth+'px'
+  
+  let offset = 0;
+  let step = 1;
+  let ostatok = 0;
+  
+  const next = NEXTARROW.addEventListener('click', function () {
+      ostatok = lineWidth-couruselOffsets - (offset + widthArr[step])
+  
+      if ( ostatok >= 0 ) {
+        offset = offset+widthArr[step]
+        coruselLine.style.left = -offset+'px'
+      }
+      else {
+        offset = 0;
+        step = 0
+      }
+  
+      if(step +1 == coruselItem.length){
+        step =0
+        offset=0
+      } else{step ++}
+  })
+  
+  BACKARROW.addEventListener('click', function () {
+    ostatok = lineWidth-couruselOffsets + (offset - widthArr[step])
+  
+    if ( ostatok != 0 ) {
+      offset = offset+widthArr[step]
+      coruselLine.style.left = offset+'px'
+    } 
+  })
 }
 
 // potfolio, portfolio TAGS, portfolio item...
@@ -13,23 +102,17 @@ const addTagsClickHandler = () => {
       let clickedTag = e.target
       removeSelectedTags()
       addClickedTag(clickedTag)
-      rendorRandomPartfolio()
+      rendorRandomItem()
     }
-  })
-
-// MODAL
-  document.querySelector('.submit-btn').addEventListener('click', (e) => {
-    e.preventDefault()
-    onSubmitGetValue()
   })
 }
 
 const removeSelectedTags = () => {
-  let tags = document.querySelectorAll('.portfolio__tags-menu .tag');
+  let tags = document.querySelectorAll('.portfolio__tags-menu .tag')
   tags.forEach(tag => {
     tag.classList.remove('active')
   })
-} 
+}
 
 const addClickedTag = (clickedTag) => {
   clickedTag.classList.add('active')
@@ -73,7 +156,7 @@ const rendorPartfolioItem = () => {
   addNewWorkList(arrImages)
 }
 
-const rendorRandomPartfolio = () => {
+const rendorRandomItem = () => {
   const arrImages =  [
     './asets/portfolio-works/Project.png',
     './asets/portfolio-works/Project-3.png',
@@ -113,7 +196,16 @@ const addNewWorkList =  (arrayWithImagePath) => {
   })
 }
 
-// form , modal window
+const addBorderByItem = ()=>{
+  const MENU = document.querySelector('.portfolio__work')
+
+  MENU.addEventListener('click', (e) => {
+    MENU.querySelectorAll('img').forEach(el => el.classList.remove('active'))
+    e.target.classList.add('active')
+  })
+}
+
+// Form
 const onSubmitGetValue = () => {
   let formDataSubject = document.querySelector("#subject").value
   let formDataText = document.querySelector("#describe").value
@@ -131,9 +223,9 @@ const onSubmitGetValue = () => {
     formDataText = 'Без описания'
   } else {formDataText}
 
-  modal.insertAdjacentHTML("beforeend", `<p class="modal__aception">Письмо отправлено</p> <br>`)
-  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-title">Тема: ${formDataSubject}</p>`)
-  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-text">Описание: ${formDataText}</p>`)
+  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__aception">Письмо отправлено</p> <br>`)
+  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en" class="modal__mail-title">Тема: ${formDataSubject}</p>`)
+  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__mail-text">Описание: ${formDataText}</p>`)
   modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`)
 
 

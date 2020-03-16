@@ -20,6 +20,15 @@
   background: #F2F2F2;
 }
 
+h1, .h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.4px;
+}
+
 h2, .h2{
   font-family: Lato;
   font-style: normal;
@@ -81,20 +90,12 @@ header {
   border-bottom: 7px solid #323746;
 
   .logo {
-    width: 50%;
     text-transform: uppercase;
 
     &__title{
-      padding-left: 1px;
-      margin-top: -4px;
-      letter-spacing: -0.4px;
-      font-size: 25px;
-      font-weight: 700;
-      line-height: 6px;
-
-      a{
-        color: #ffffff;
-      }
+      color: #ffffff;
+      padding-bottom: 6px;
+      padding-left: 2px;
     }
   }
 
@@ -406,7 +407,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 290px;
-    margin-bottom: 19px;
+    margin-bottom: 13px;
 
     .tag {
       font-size: 12px;
@@ -434,10 +435,26 @@ header {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 17px 20px;
+    grid-gap: 10px 0px;
     justify-items: center;
-    height: 600px;
+    height: 612px;
+    margin: 0 -10px;
     overflow: hidden;
+
+    .work-item {
+      cursor: pointer;
+
+      img {
+        display: block;
+        border: solid 5px transparent;
+      }
+
+      .active {
+        border: solid 5px #F06C64;
+      }
+    }
+
+    
   }
 }
 

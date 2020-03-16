@@ -9,13 +9,13 @@
 </head>
 <body>
   
-  <section class="main">
+  <div class="main">
     <header>
-      <div class="logo">
-        <h1 class="logo__title">
-          <a href="#" >singolo<span class="rad-star">*</span></a>
-        </h1>
-      </div>
+      <section class="logo">
+        <a href="#" >
+          <h1 class="logo__title">singolo<span class="rad-star">*</span></h1> 
+        </a>
+      </section>
 
       <nav>
         <ul id="menu" class="nav-menu">
@@ -36,7 +36,7 @@
       </nav>
     </header>
 
-    <section class="corusel-container">
+    <div class="corusel-container">
       <div class="corusel-slide">
         <div class="item phones">
           <div class="phones__vertical">
@@ -57,26 +57,25 @@
         </div>
 
         <div class="item blue-screen">
-            <div class="phones-left">
-              <img src="/asets/slider-content.png" alt="">
-            </div>
+          <div class="phones-left">
+            <img src="/asets/slider-content.png" alt="">
+          </div>
 
-            <div class="phones-center">
-              <img src="/asets/slider-content-2.png" alt="">
-              <span class="blackscreen_blue-h"></span>
-              <span id="home-btn"></span>
-            </div>
+          <div class="phones-center">
+            <img src="/asets/slider-content-2.png" alt="">
+            <span class="blackscreen_blue-h"></span>
+            <span id="home-btn"></span>
+          </div>
 
-            <div class="phones-right">
-              <img src="/asets/slider-content-1.png" alt="">
-            </div>
-
+          <div class="phones-right">
+            <img src="/asets/slider-content-1.png" alt="">
+          </div>
         </div>
       </div>
 
       <div class="arrow-back"></div>
       <div class="arrow-next"></div>
-    </section>
+    </div>
 
     <section class="services">
       <h2 class="services__title">
@@ -400,6 +399,7 @@
         </span>
       </div>
     </footer>
+    
 
     <div class="overlay">
       <div class="modal">
@@ -408,8 +408,7 @@
     </div>
 
 <!-- Main -->
-  </section>
+  </div>
 </body>
-<script src='./main.js'></script>
-<script src='./sort.js'></script>
+  <script src='./script.js'></script>
 </html>
