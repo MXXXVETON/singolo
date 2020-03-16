@@ -12,11 +12,12 @@ window.onload = function() {
   rendorPartfolioItem()
 
   addBorderByItem()
+
 }
 
 // Main menu
 const addNavClickHandler = () => {
-  const MENU = document.querySelector('#menu')
+  let MENU = document.querySelector('#menu')
 
   MENU.addEventListener('click', (e) => {
     MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
@@ -133,8 +134,6 @@ const rendorPartfolioItem = () => {
     './asets/portfolio-works/Project-6.png',
     './asets/portfolio-works/Project-8.png'
   ];
-
-  const counter = 0
  
   function addNewWorkList (arrayWithImagePath) {
     const containerByWorks = document.querySelector('.portfolio__work')
@@ -197,7 +196,7 @@ const addNewWorkList =  (arrayWithImagePath) => {
 }
 
 const addBorderByItem = ()=>{
-  const MENU = document.querySelector('.portfolio__work')
+  let MENU = document.querySelector('.portfolio__work')
 
   MENU.addEventListener('click', (e) => {
     MENU.querySelectorAll('img').forEach(el => el.classList.remove('active'))
@@ -205,7 +204,13 @@ const addBorderByItem = ()=>{
   })
 }
 
-// Form
+// Form return MODALwindow
+document.querySelector('.submit-btn').addEventListener('click', (e) => {
+  e.preventDefault()
+  onSubmitGetValue()
+})
+
+// Modal content
 const onSubmitGetValue = () => {
   let formDataSubject = document.querySelector("#subject").value
   let formDataText = document.querySelector("#describe").value
