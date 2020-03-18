@@ -6,14 +6,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-  padding: 0; }
-
-.main {
-  width: 100%;
-  max-width: 1020px;
-  margin: 0 auto;
+  padding: 0;
   font-family: 'Lato', sans-serif;
-  background: #F2F2F2; }
+  scroll-behavior: smooth; }
 
 h1, .h1 {
   font-family: Lato;
@@ -53,15 +48,37 @@ p {
   text-align: justify;
   color: #767E9E; }
 
+.main {
+  position: relative;
+  background: #F2F2F2; }
+
+.content-wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px; }
+  @media screen and (max-width: 375px) {
+    .content-wrapper {
+      padding: 0 30px; } }
+
+.bg-darkblue {
+  background: #2d303a; }
+
+.bg-pink {
+  background: #f06c64; }
+
 .under-line {
   width: 100%;
-  height: 7px; }
+  height: 6px; }
 
 .under-line_blue {
   background: #323746; }
 
 .under-line_white {
   background: #fff; }
+
+.under-line_pink {
+  background: #EA676B; }
 
 header {
   display: -webkit-box;
@@ -76,10 +93,7 @@ header {
   background: #2d303a;
   color: whitesmoke;
   font-weight: 700;
-  height: 95px;
-  padding: 0 38px;
-  padding-top: 5px;
-  border-bottom: 7px solid #323746; }
+  padding: 1.7em 0; }
   header .logo {
     text-transform: uppercase; }
     header .logo__title {
@@ -121,11 +135,17 @@ header {
         background: #494e62; }
   header .rad-star {
     color: #f06c64; }
+  @media screen and (max-width: 375px) {
+    header {
+      padding: 1.3em 0;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      header nav {
+        display: none; } }
 
 .corusel-container {
-  width: 1020px;
   position: relative;
-  border-bottom: #ea666b 5px solid;
   overflow: hidden;
   height: 600px; }
   .corusel-container .corusel-slide {
@@ -275,10 +295,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-bottom: 7px solid #ffffff;
   color: #767e9e;
-  padding: 0 40px;
-  background: #f2f2f2;
   padding-top: 60px;
   padding-bottom: 11px; }
   .services__title {
@@ -287,17 +304,20 @@ header {
     margin-bottom: 37px; }
   .services__menu {
     display: grid;
-    grid-template: 100px 100px/ 1fr 1fr 1fr;
-    gap: 26px 19px;
-    margin-top: 10px;
+    grid-template-areas: "a a a";
+    grid-gap: 20px;
     margin-bottom: 35px; }
+    @media screen and (max-width: 768px) {
+      .services__menu {
+        grid-template-areas: "a a"; } }
+    @media screen and (max-width: 375px) {
+      .services__menu {
+        grid-template-areas: "a"; } }
   .services .menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     overflow: hidden; }
-    .services .menu-list:nth-of-type(n) {
-      color: green !important; }
     .services .menu-list__img {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -326,7 +346,6 @@ header {
 
 .portfolio {
   background: #2d303a;
-  padding: 0 40px;
   padding-top: 60px;
   padding-bottom: 67px; }
   .portfolio__title {
@@ -362,17 +381,20 @@ header {
       color: #BBBBBB; }
   .portfolio__work {
     display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px 0px;
-    justify-items: center;
-    height: 612px;
-    margin: 0 -10px;
+    grid-template-areas: "a a a a" "a a a a" "a a a a";
+    grid-gap: 10px;
+    margin: 0 auto;
     overflow: hidden; }
+    @media screen and (max-width: 768px) {
+      .portfolio__work {
+        grid-template-areas: "a a a" "a a a" "a a a" "a a a"; } }
+    @media screen and (max-width: 375px) {
+      .portfolio__work {
+        grid-template-areas: "a a" "a a" "a a" "a a"; } }
     .portfolio__work .work-item {
       cursor: pointer; }
       .portfolio__work .work-item img {
-        display: block;
+        width: 100%;
         border: solid 5px transparent; }
       .portfolio__work .work-item .active {
         border: solid 5px #F06C64; }
@@ -386,7 +408,6 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #f2f2f2;
-  padding: 0 40px;
   padding-top: 60px;
   padding-bottom: 69px; }
   .about-us__title {
@@ -395,27 +416,15 @@ header {
     margin-bottom: 44px; }
   .about-us__persone {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "a a a";
     grid-gap: 20px; }
+    @media screen and (max-width: 375px) {
+      .about-us__persone {
+        grid-template-areas: "a"; } }
   .about-us .persone-item__foto {
-    max-height: 300px;
-    min-width: 300px;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 18px;
-    overflow: hidden; }
-    .about-us .persone-item__foto_adam-jensen {
-      background-image: url("./asets/photo/photo-1.png");
-      background-repeat: no-repeat;
-      background-position: center; }
-    .about-us .persone-item__foto_desmond-miles {
-      background-image: url("./asets/photo/photo-2.png");
-      background-repeat: no-repeat;
-      background-position: center; }
-    .about-us .persone-item__foto_scolara-visari {
-      background-image: url("./asets/photo/photo.png");
-      background-repeat: no-repeat;
-      background-position: center; }
+    margin-bottom: 18px; }
+    .about-us .persone-item__foto img {
+      width: 100%; }
   .about-us .persone-item__name {
     height: 18px;
     overflow: hidden;
@@ -446,7 +455,6 @@ header {
 
 .form-quote {
   background: #f06c64;
-  padding: 0 40px;
   padding-top: 60px;
   padding-bottom: 20px; }
   .form-quote__title {
@@ -455,11 +463,11 @@ header {
   .form-quote__subtitle {
     margin-bottom: 20px;
     color: #F0D8D9; }
-  .form-quote .row {
+  .form-quote__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .form-quote .row .col {
+    .form-quote__wrapper .wrap {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -467,24 +475,24 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-    .form-quote .row .col-form {
+    .form-quote__wrapper .form {
       padding-top: 22px;
       width: 66%; }
-    .form-quote .row .contacts {
+    .form-quote__wrapper .contacts {
       font-size: 12px;
       letter-spacing: 0.2px;
       width: 34%;
       padding: 18px; }
-      .form-quote .row .contacts__titel {
+      .form-quote__wrapper .contacts__titel {
         font-weight: 900;
         letter-spacing: 0px;
         margin-bottom: 5px;
         color: #F0D8D9; }
-      .form-quote .row .contacts__miniarticle {
+      .form-quote__wrapper .contacts__miniarticle {
         margin-bottom: 25px;
         letter-spacing: -0.5px;
         color: #F0D8D9; }
-      .form-quote .row .contacts__info {
+      .form-quote__wrapper .contacts__info {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -492,24 +500,24 @@ header {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        .form-quote .row .contacts__info-location {
+        .form-quote__wrapper .contacts__info-location {
           color: #F0D8D9;
           margin-bottom: 7px;
           letter-spacing: 0; }
-          .form-quote .row .contacts__info-location img {
+          .form-quote__wrapper .contacts__info-location img {
             margin-left: 4px;
             margin-right: 10px; }
-        .form-quote .row .contacts__info-phone {
+        .form-quote__wrapper .contacts__info-phone {
           color: #F0D8D9;
           margin-bottom: 7px;
           letter-spacing: 0; }
-          .form-quote .row .contacts__info-phone img {
+          .form-quote__wrapper .contacts__info-phone img {
             margin-left: 2px;
             margin-right: 8px; }
-        .form-quote .row .contacts__info-mail {
+        .form-quote__wrapper .contacts__info-mail {
           color: #F0D8D9;
           letter-spacing: 0; }
-          .form-quote .row .contacts__info-mail img {
+          .form-quote__wrapper .contacts__info-mail img {
             margin-right: 9px; }
   .form-quote #getQuote {
     display: -webkit-box;
@@ -572,6 +580,17 @@ header {
       background: #FBC65F;
       color: wheat;
       border-radius: 5px; }
+    @media screen and (max-width: 375px) {
+      .form-quote #getQuote .submit-btn {
+        width: 100%; } }
+  @media screen and (max-width: 375px) {
+    .form-quote__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .form-quote .wrap {
+      width: 100%; } }
 
 footer {
   display: -webkit-box;
@@ -584,7 +603,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 45px 20px 45px; }
+  padding: 20px 0; }
   footer .social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -592,13 +611,18 @@ footer {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 158px;
-    position: relative;
-    right: -7px; }
+    position: relative; }
   footer .corp {
     font-size: 12px;
     color: #666d89;
-    position: relative;
-    left: -5px; }
+    position: relative; }
+  @media screen and (max-width: 375px) {
+    footer {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      footer .corp {
+        display: none; } }
 
 .overlay {
   visibility: hidden;

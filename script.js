@@ -1,5 +1,6 @@
 window.onload = function() {
   // Main menu
+  navByScrolling()
   addNavClickHandler()
 
   // Courusel
@@ -17,12 +18,33 @@ window.onload = function() {
 
 // Main menu
 const addNavClickHandler = () => {
-  let MENU = document.querySelector('#menu')
+  let menu = document.querySelector('#menu')
 
-  MENU.addEventListener('click', (e) => {
-    MENU.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
+  menu.addEventListener('click', (e) => {
+    menu.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
     e.target.classList.add('active')
   })
+}
+
+const navByScrolling = () => {
+  document.addEventListener('scroll', onScroll)
+
+  function onScroll(e) {
+    let currPos = window.scrollY
+    let menuSection = document.querySelectorAll('div.main>section')
+    let menu = document.querySelectorAll('li a')
+  
+    menuSection.forEach((item) => {
+      if (item.offsetTop <= currPos && (item.offsetTop + item.offsetHeight) > currPos)  {
+        menu.forEach((el) => {
+          el.classList.remove('active')
+          if(item.getAttribute('id') === el.getAttribute('href').substring(1)) {
+            el.classList.add('active')
+          }
+        })
+      }
+    })
+  }
 }
 
 // Courusel
@@ -244,3 +266,27 @@ const onSubmitGetValue = () => {
 
   document.body.style.overflow = 'hidden'
 }
+
+// Scroll window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

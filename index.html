@@ -8,405 +8,447 @@
   <link rel='stylesheet' type='text/css' media='screen' href='./style.css'>
 </head>
 <body>
-  
   <div class="main">
-    <header>
-      <section class="logo">
-        <a href="#" >
-          <h1 class="logo__title">singolo<span class="rad-star">*</span></h1> 
-        </a>
-      </section>
 
-      <nav>
-        <ul id="menu" class="nav-menu">
-          <li><a href="#" class="active">home</a></li>
-
-          <span class="nav-menu__dots"></span>
-          <li><a href="#service">services</a></li>
-
-          <span class="nav-menu__dots"></span>
-          <li><a href="#">portfolio</a></li>
-
-          <span class="nav-menu__dots"></span>
-          <li><a href="#">about</a></li>
-
-          <span class="nav-menu__dots"></span>
-          <li><a href="#">contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="corusel-container">
-      <div class="corusel-slide">
-        <div class="item phones">
-          <div class="phones__vertical">
-            <span class="blackscreen"></span>
-
-            <span id="home"></span>
-
-            <img src="./asets/iphone-vertical.png" alt="">           
-          </div>
-
-          <div class="phones__horizontal">
-            <span class="blackscreen_h"></span>
-
-            <span id="home_horizontal"></span>
-
-            <img src="./asets/iphone-horizontal.png" alt="">
-          </div>
-        </div>
-
-        <div class="item blue-screen">
-          <div class="phones-left">
-            <img src="/asets/slider-content.png" alt="">
-          </div>
-
-          <div class="phones-center">
-            <img src="/asets/slider-content-2.png" alt="">
-            <span class="blackscreen_blue-h"></span>
-            <span id="home-btn"></span>
-          </div>
-
-          <div class="phones-right">
-            <img src="/asets/slider-content-1.png" alt="">
-          </div>
-        </div>
+    <!-- HEADER -->
+    <div class="bg-darkblue">
+      <div class="content-wrapper">
+        <header>
+          <section class="logo">
+            <a href="#" >
+              <h1 class="logo__title">singolo<span class="rad-star">*</span></h1> 
+            </a>
+          </section>
+    
+          <nav>
+            <ul id="menu" class="nav-menu">
+              <li><a href="#home" class="active">home</a></li>
+    
+              <span class="nav-menu__dots"></span>
+              <li><a href="#service">services</a></li>
+    
+              <span class="nav-menu__dots"></span>
+              <li><a href="#portfolio">portfolio</a></li>
+    
+              <span class="nav-menu__dots"></span>
+              <li><a href="#about">about</a></li>
+    
+              <span class="nav-menu__dots"></span>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </nav>
+        </header>
       </div>
 
-      <div class="arrow-back"></div>
-      <div class="arrow-next"></div>
+      <div class="under-line under-line_blue"></div>
     </div>
 
-    <section class="services">
-      <h2 class="services__title">
-        Our Services
-      </h2>
-
-      <h3 class="services__subtitle">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-        Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
-        eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-      </h3>
-
-      <div class="services__menu">
-        <div class="menu-list">
-          <div class="menu-list__img">
-            <img src="./asets/pen.png" alt="pan">
-          </div>
-
-          <div class="menu-list__content">
-            <h3>
-              Custom Design
-            </h3>
-
-            <p>
-              Curabitur vestibulum eget mauris quis laoreet. 
-              Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-list">
-          <div class="menu-list__img">
-            <img src="./asets/bulb.png" alt="">
-          </div>
-
-          <div class="menu-list__content">
-            <h3>Inovative Ideas</h3>
-
-            <p>
-              Quisque luctus, quam eget molestie commodo, 
-              lacus purus cursus purus, nec rutrum tellus dolor id lorem.
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-list">
-          <div class="menu-list__img">
-            <img src="/asets/heart.png" alt="">
-          </div>
-
-          <div class="menu-list__content">
-            <h3>Love Is The Answer</h3>
-
-            <p>
-              Nulla sed nunc et tortor luctus faucibus. 
-              Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-list pt-1">
-          <div class="menu-list__img">
-            <img src="./asets/phone.png" alt="">
-          </div>
-
-          <div class="menu-list__content">
-            <h3 class="fixedpp">Responsive Layout</h3>
-
-            <p>
-              Sed porttitor placerat rhoncus. In at nunc tellus. 
-              Maecenas blandit nunc ligula. Praesent elit leo.
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-list pt-1">
-          <div class="menu-list__img">
-            <img src="./asets/bubble.png" alt="">
-          </div>
-
-          <div class="menu-list__content">
-            <h3 class="fixedpp">24 / 7 Support</h3>
-
-            <p>
-              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. 
-              Nulla a sem erat. Pellentesque egestas venenatis lorem .
-            </p>
-          </div>
-        </div>
-
-        <div class="menu-list pt-1">
-          <div class="menu-list__img">
-            <img src="./asets/star.png" alt="">
-          </div>
-
-          <div class="menu-list__content">
-            <h3 class="fixedpast">Feel Like A Star</h3>
-
-            <p>
-              Quisque hendrerit purus dapibus, ornare nibh vitae, 
-              viverra nibh. Fusce vitae aliquam tellus.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio">
-      <h2 class="portfolio__title">Portfolio</h2>
-
-      <h3 class="portfolio__subtitle">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
-        eget lacinia odio sem nec elit.
-      </h3>
-      
-
-      <div class='portfolio__tags-menu'>
-        <span class="tag tag__all active">All</span>
-        <span class="tag tag__web">Web Design</span>
-        <span  class="tag tag__graphic">Graphic Design</span>
-        <span class="tag tag__artwork">Artwork</span>
-      </div>
-
-      <div class="portfolio__work">
-        <!-- Rendor Item on JS -->
-      </div>
-    </section>
-
-    <section class="about-us">
-      <h2 class="about-us__title">
-        About Us
-      </h2>
-
-      <h3 class="about-us__subtitle">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-        Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-      </h3>
-
-      <div class="about-us__persone">
-        <div class="persone-item">
-          <div class="persone-item__foto persone-item__foto_adam-jensen">
-            <!-- <img src="./asets/photo/photo-1.png" alt="BG"> -->
-          </div>
-
-          
-          <h3 class="persone-item__name">
-            Adam Jensen
-          </h3>
-
-
-          <p class="persone-item__short-info">
-            Quisque luctus, quam eget molestie commodo, 
-            lacus purus cursus purus, nec rutrum tellus dolor id lorem.
-          </p>
-
-          <div class="persone-item__social">
-            <span class="facebook"> 
-              <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
-            </span>
-            
-            <span class="google"> 
-              <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
-            </span>
-            
-            <span class="twiter"> 
-              <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
-            </span>
-            
-            <span class="linkedin"> 
-              <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
-            </span>
-          </div>
-        </div>
-
-        <div class="persone-item">
-          <div class="persone-item__foto persone-item__foto_desmond-miles">
-            <!-- <img src="./asets/photo/photo-2.png" alt="BG"> -->
-          </div>
-
-          <h3 class="persone-item__name">
-            Desmond Miles
-          </h3>
-          
-          <p class="persone-item__short-info">
-            Curabitur vestibulum eget mauris quis laoreet. 
-            Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
-          </p>
-
-          <div class="persone-item__social">
-            <span class="facebook"> 
-              <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
-            </span>
-            
-            <span class="google"> 
-              <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
-            </span>
-            
-            <span class="twiter"> 
-              <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
-            </span>
-            
-            <span class="linkedin"> 
-              <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
-            </span>
-          </div>
-        </div>
-
-        <div class="persone-item">
-          <div class="persone-item__foto persone-item__foto_scolara-visari">
-            <!-- <img src="./asets/photo/photo.png" alt="BG"> -->
-          </div>
-
-          <h3 class="persone-item__name">
-            Scolara Visari
-          </h3>
-          
-          <p class="persone-item__short-info">
-            Nulla sed nunc et tortor luctus faucibus. 
-            Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
-          </p>
-
-          <div class="persone-item__social">
-            <span class="facebook"> 
-              <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
-            </span>
-            
-            <span class="google"> 
-              <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
-            </span>
-            
-            <span class="twiter"> 
-              <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
-            </span>
-            
-            <span class="linkedin"> 
-              <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="form-quote">
-      <h2 class="form-quote__title">
-        Get a Quote
-      </h2>
-
-      <h3 class="form-quote__subtitle">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
-        non commodo luctus, nisi erat porttitor ligula, 
-        eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-      </h3>
-
-      <div class="row">
-        <div class="col col-form">
-
-          <form id="getQuote" action="#" method="POST">
-            <input value="" type="text" id="name" name="name" required pattern="[A-Za-zА-Яа-яЁё\s]+"placeholder="Name (Required)">
-
-            <input value="" type="email" id="email" name="email" requiredpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email (Required)">
-
-            <input value="" type="text" id="subject" name="subject" placeholder="Subject">
-            
-            <textarea aria-valuetext="" id="describe" name="describe" placeholder="Describe your project in detail..." cols="30" rows="10"></textarea>
-
-            <button class="submit-btn">Submit</button>
-          </form>
-        </div>
-
-        <div class="col contacts">
-          <h3 class="contacts__titel">
-            Contact Information
-          </h3>
-
-          <p class="contacts__miniarticle">
-            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. 
-            Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
-            Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
-          </p>
-
-
-          <div class="contacts__info">
-            <a class="contacts__info-location" href="">
-              <img src="./asets/icon/location.png" alt="location">
-              <span>Elm St. 14/05 Lost City</span>
-            </a>
-            <a class="contacts__info-phone" href="tel:03528 331 86 35">
-              <img src="./asets/icon/phoneicon.png" alt="phone">
-              <span>03528 331 86 35</span>
-            </a>
-            <a class="contacts__info-mail" href="mailto:info@singolo.com">
-              <img src="./asets/icon/mail.png" alt="mail">
-              <span>info@singolo.com</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <span class="corp">
-        © Copyright 2013
-      </span>
-
-      <div class="social">
-        <span class="facebook"> 
-          <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
-        </span>
-        
-        <span class="google"> 
-          <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
-        </span>
-        
-        <span class="twiter"> 
-          <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
-        </span>
-        
-        <span class="linkedin"> 
-          <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
-        </span>
-      </div>
-    </footer>
+    <!-- COURUSEL -->
+    <div class="bg-pink">
+      <div class="content-wrapper">
+         <section id="home" class="corusel-container">
+          <div class="corusel-slide">
+            <div class="item phones">
+              <div class="phones__vertical">
+                <span class="blackscreen"></span>
     
+                <span id="home"></span>
+    
+                <img src="./asets/iphone-vertical.png" alt="">           
+              </div>
+    
+              <div class="phones__horizontal">
+                <span class="blackscreen_h"></span>
+    
+                <span id="home_horizontal"></span>
+    
+                <img src="./asets/iphone-horizontal.png" alt="">
+              </div>
+            </div>
+    
+            <div class="item blue-screen">
+              <div class="phones-left">
+                <img src="/asets/slider-content.png" alt="">
+              </div>
+    
+              <div class="phones-center">
+                <img src="/asets/slider-content-2.png" alt="">
+                <span class="blackscreen_blue-h"></span>
+                <span id="home-btn"></span>
+              </div>
+    
+              <div class="phones-right">
+                <img src="/asets/slider-content-1.png" alt="">
+              </div>
+            </div>
+          </div>
+    
+          <div class="arrow-back"></div>
+          <div class="arrow-next"></div>
+        </section>
+      </div>
+      <div class="under-line under-line_pink"></div>
+    </div>
 
+    <!-- SERVICE -->
+    <div class="bg-gray">
+      <div class="content-wrapper">
+        <section id="service" class="services">
+          <h2 class="services__title">
+            Our Services
+          </h2>
+    
+          <h3 class="services__subtitle">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
+            eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          </h3>
+    
+          <div class="services__menu">
+            <div class="menu-list">
+              <div class="menu-list__img">
+                <img src="./asets/pen.png" alt="pan">
+              </div>
+    
+              <div class="menu-list__content">
+                <h3>
+                  Custom Design
+                </h3>
+    
+                <p>
+                  Curabitur vestibulum eget mauris quis laoreet. 
+                  Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+                </p>
+              </div>
+            </div>
+    
+            <div class="menu-list">
+              <div class="menu-list__img">
+                <img src="./asets/bulb.png" alt="">
+              </div>
+    
+              <div class="menu-list__content">
+                <h3>Inovative Ideas</h3>
+    
+                <p>
+                  Quisque luctus, quam eget molestie commodo, 
+                  lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+                </p>
+              </div>
+            </div>
+    
+            <div class="menu-list">
+              <div class="menu-list__img">
+                <img src="/asets/heart.png" alt="">
+              </div>
+    
+              <div class="menu-list__content">
+                <h3>Love Is The Answer</h3>
+    
+                <p>
+                  Nulla sed nunc et tortor luctus faucibus. 
+                  Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+                </p>
+              </div>
+            </div>
+    
+            <div class="menu-list pt-1">
+              <div class="menu-list__img">
+                <img src="./asets/phone.png" alt="">
+              </div>
+    
+              <div class="menu-list__content">
+                <h3 class="fixedpp">Responsive Layout</h3>
+    
+                <p>
+                  Sed porttitor placerat rhoncus. In at nunc tellus. 
+                  Maecenas blandit nunc ligula. Praesent elit leo.
+                </p>
+              </div>
+            </div>
+    
+            <div class="menu-list pt-1">
+              <div class="menu-list__img">
+                <img src="./asets/bubble.png" alt="">
+              </div>
+    
+              <div class="menu-list__content">
+                <h3 class="fixedpp">24 / 7 Support</h3>
+    
+                <p>
+                  Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. 
+                  Nulla a sem erat. Pellentesque egestas venenatis lorem .
+                </p>
+              </div>
+            </div>
+    
+            <div class="menu-list pt-1">
+              <div class="menu-list__img">
+                <img src="./asets/star.png" alt="">
+              </div>
+    
+              <div class="menu-list__content">
+                <h3 class="fixedpast">Feel Like A Star</h3>
+    
+                <p>
+                  Quisque hendrerit purus dapibus, ornare nibh vitae, 
+                  viverra nibh. Fusce vitae aliquam tellus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="under-line under-line_white"></div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div class="bg-darkblue">
+      <div class="content-wrapper">
+        <section id="portfolio" class="portfolio">
+          <h2 class="portfolio__title">Portfolio</h2>
+    
+          <h3 class="portfolio__subtitle">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
+            eget lacinia odio sem nec elit.
+          </h3>
+          
+    
+          <div class='portfolio__tags-menu'>
+            <span class="tag tag__all active">All</span>
+            <span class="tag tag__web">Web Design</span>
+            <span  class="tag tag__graphic">Graphic Design</span>
+            <span class="tag tag__artwork">Artwork</span>
+          </div>
+    
+          <div class="portfolio__work">
+            <!-- Rendor Item on JS -->
+          </div>
+        </section>
+      </div>
+      <div class="under-line under-line_blue"></div>
+    </div>
+
+    <!-- ABOUT US -->
+    <div class="bg-gray">
+      <div class="content-wrapper">
+        <section id="about" class="about-us">
+          <h2 class="about-us__title">
+            About Us
+          </h2>
+    
+          <h3 class="about-us__subtitle">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          </h3>
+    
+          <div class="about-us__persone">
+            <div class="persone-item">
+              <div class="persone-item__foto persone-item__foto_adam-jensen">
+                <img src="./asets/photo/photo-1.png" alt="photo">
+              </div>
+    
+              
+              <h3 class="persone-item__name">
+                Adam Jensen
+              </h3>
+    
+    
+              <p class="persone-item__short-info">
+                Quisque luctus, quam eget molestie commodo, 
+                lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+              </p>
+    
+              <div class="persone-item__social">
+                <span class="facebook"> 
+                  <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
+                </span>
+                
+                <span class="google"> 
+                  <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
+                </span>
+                
+                <span class="twiter"> 
+                  <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
+                </span>
+                
+                <span class="linkedin"> 
+                  <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
+                </span>
+              </div>
+            </div>
+    
+            <div class="persone-item">
+              <div class="persone-item__foto persone-item__foto_desmond-miles">
+                <img src="./asets/photo/photo-2.png" alt="photo">
+              </div>
+    
+              <h3 class="persone-item__name">
+                Desmond Miles
+              </h3>
+              
+              <p class="persone-item__short-info">
+                Curabitur vestibulum eget mauris quis laoreet. 
+                Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+              </p>
+    
+              <div class="persone-item__social">
+                <span class="facebook"> 
+                  <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
+                </span>
+                
+                <span class="google"> 
+                  <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
+                </span>
+                
+                <span class="twiter"> 
+                  <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
+                </span>
+                
+                <span class="linkedin"> 
+                  <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
+                </span>
+              </div>
+            </div>
+    
+            <div class="persone-item">
+              <div class="persone-item__foto persone-item__foto_scolara-visari">
+                <img src="./asets/photo/photo.png" alt="photo">
+              </div>
+    
+              <h3 class="persone-item__name">
+                Scolara Visari
+              </h3>
+              
+              <p class="persone-item__short-info">
+                Nulla sed nunc et tortor luctus faucibus. 
+                Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+              </p>
+    
+              <div class="persone-item__social">
+                <span class="facebook"> 
+                  <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
+                </span>
+                
+                <span class="google"> 
+                  <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
+                </span>
+                
+                <span class="twiter"> 
+                  <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
+                </span>
+                
+                <span class="linkedin"> 
+                  <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="under-line under-line_white"></div>
+    </div>
+
+    <!-- FORM & INFO -->
+    <div class="bg-pink">
+      <div class="content-wrapper">
+        <section id="contact" class="form-quote">
+          <h2 class="form-quote__title">
+            Get a Quote
+          </h2>
+    
+          <h3 class="form-quote__subtitle">
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, 
+            non commodo luctus, nisi erat porttitor ligula, 
+            eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          </h3>
+    
+          <div class="form-quote__wrapper">
+            <div class="wrap form">
+    
+              <form id="getQuote" action="#" method="POST">
+                <input value="" type="text" id="name" name="name" required pattern="[A-Za-zА-Яа-яЁё\s]+"placeholder="Name (Required)">
+    
+                <input value="" type="email" id="email" name="email" requiredpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email (Required)">
+    
+                <input value="" type="text" id="subject" name="subject" placeholder="Subject">
+                
+                <textarea aria-valuetext="" id="describe" name="describe" placeholder="Describe your project in detail..." cols="30" rows="10"></textarea>
+    
+                <button class="submit-btn">Submit</button>
+              </form>
+            </div>
+    
+            <div class="wrap contacts">
+              <h3 class="contacts__titel">
+                Contact Information
+              </h3>
+    
+              <p class="contacts__miniarticle">
+                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. 
+                Fusce vitae aliquam tellus. Proin sit amet volutpat libero. 
+                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+              </p>
+    
+    
+              <div class="contacts__info">
+                <a class="contacts__info-location" href="">
+                  <img src="./asets/icon/location.png" alt="location">
+                  <span>Elm St. 14/05 Lost City</span>
+                </a>
+                <a class="contacts__info-phone" href="tel:03528 331 86 35">
+                  <img src="./asets/icon/phoneicon.png" alt="phone">
+                  <span>03528 331 86 35</span>
+                </a>
+                <a class="contacts__info-mail" href="mailto:info@singolo.com">
+                  <img src="./asets/icon/mail.png" alt="mail">
+                  <span>info@singolo.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="under-line under-line_pink"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-darkblue">
+      <div class="content-wrapper">
+        <footer >
+          <span class="corp">
+            © Copyright 2013
+          </span>
+    
+          <div class="social">
+            <span class="facebook"> 
+              <a href="#"><img src="./asets/social/facebook.png" alt="Facebook"></a>
+            </span>
+            
+            <span class="google"> 
+              <a href="#"><img src="./asets/social/google.png" alt="Google"></a>
+            </span>
+            
+            <span class="twiter"> 
+              <a href="#"><img src="./asets/social/twitter.png" alt="Twitter"></a>
+            </span>
+            
+            <span class="linkedin"> 
+              <a href="#"><img src="./asets/social/linkedin.png" alt="LinkedIn"></a>
+            </span>
+          </div>
+        </footer>
+      </div>
+    </div>
+    
+<!-- MODAL WINDOW -->
     <div class="overlay">
       <div class="modal">
         <!-- JS rendor -->
       </div>
     </div>
-
 <!-- Main -->
   </div>
 </body>
