@@ -3,8 +3,8 @@ window.onload = function() {
   navByScrolling()
   addNavClickHandler()
 
-  // Courusel
-  addCourusel()
+  // // Courusel
+  // addCourusel()
 
   // TAGS
   addTagsClickHandler()
@@ -47,76 +47,8 @@ const navByScrolling = () => {
   }
 }
 
-// Courusel
-const addCourusel = () => {
-  const couruselOffsets = document.querySelector('.corusel-container').offsetWidth;
-  const coruselLine = document.querySelector('.corusel-slide');
-  const coruselItem = document.querySelectorAll('.item');
-  
-  // btn
-  const BACKARROW = document.querySelector('.arrow-back')
-  const NEXTARROW =document.querySelector('.arrow-next')
-  const HOME = document.querySelector('#home')
-  const HOME_HORIZONTAL = document.querySelector('#home_horizontal')
-  const BLACKSCREEN = document.querySelector('.blackscreen')
-  const BLACKSCREEN_H = document.querySelector('.blackscreen_h')
-  const HOME_BTN = document.querySelector('#home-btn')
-  const BLACKSCREEN_H2 = document.querySelector('.blackscreen_blue-h')
-  
-  HOME.addEventListener('click', (e)=> {
-    BLACKSCREEN.classList.toggle('active')
-  })
-  
-  HOME_HORIZONTAL.addEventListener('click', (e)=> {
-    BLACKSCREEN_H.classList.toggle('active')
-  })
-  
-  HOME_BTN.addEventListener('click', (e)=> {
-    BLACKSCREEN_H2.classList.toggle('active')
-  })
-  
-  // counter
-  let widthArr = [0];
-  let lineWidth = 0;
-  
-  for(let i = 0; i < coruselItem.length; i++){
-    widthArr.push(coruselItem[i].offsetWidth)
-    lineWidth+=coruselItem[i].offsetWidth
-  } 
-  
-  coruselLine.style.width = lineWidth+'px'
-  
-  let offset = 0;
-  let step = 1;
-  let ostatok = 0;
-  
-  const next = NEXTARROW.addEventListener('click', function () {
-      ostatok = lineWidth-couruselOffsets - (offset + widthArr[step])
-  
-      if ( ostatok >= 0 ) {
-        offset = offset+widthArr[step]
-        coruselLine.style.left = -offset+'px'
-      }
-      else {
-        offset = 0;
-        step = 0
-      }
-  
-      if(step +1 == coruselItem.length){
-        step =0
-        offset=0
-      } else{step ++}
-  })
-  
-  BACKARROW.addEventListener('click', function () {
-    ostatok = lineWidth-couruselOffsets + (offset - widthArr[step])
-  
-    if ( ostatok != 0 ) {
-      offset = offset+widthArr[step]
-      coruselLine.style.left = offset+'px'
-    } 
-  })
-}
+// // Courusel
+
 
 // potfolio, portfolio TAGS, portfolio item...
 const addTagsClickHandler = () => {
@@ -268,6 +200,57 @@ const onSubmitGetValue = () => {
 }
 
 // Scroll window
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const carousel = document.querySelector('.carousel');
+const slider = document.querySelector('.slider');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+let direction;
+
+next.addEventListener('click', function() {
+  direction = -1;
+  carousel.style.justifyContent = 'flex-start';
+  slider.style.transform = 'translate(-33.3%)';  
+});
+
+prev.addEventListener('click', function() {
+  if (direction === -1) {
+    direction = 1;
+    slider.appendChild(slider.firstElementChild);
+  }
+  carousel.style.justifyContent = 'flex-end';    
+  slider.style.transform = 'translate(33.3%)';  
+});
+
+slider.addEventListener('transitionend', function() {
+  if (direction === 1) {
+    slider.prepend(slider.lastElementChild);
+  } else {
+    slider.appendChild(slider.firstElementChild);
+  }
+  
+  slider.style.transition = 'none';
+  slider.style.transform = 'translate(0)';
+  setTimeout(() => {
+    slider.style.transition = 'all .7s';
+  })
+}, false);
+
 
 
 
