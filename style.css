@@ -107,6 +107,8 @@ header {
       padding-left: 2px; }
   header .overlay-nav-menu {
     width: 100%;
+    top: 0;
+    left: 0;
     height: 100%;
     position: absolute;
     z-index: 9;
@@ -297,7 +299,7 @@ header {
     .container .slider .slide-1 .phone-vert {
       margin-right: 60px; }
       .container .slider .slide-1 .phone-vert .black-screen {
-        top: 62px;
+        top: 64px;
         left: 13px; }
       @media screen and (max-width: 768px) {
         .container .slider .slide-1 .phone-vert {
@@ -319,7 +321,7 @@ header {
             left: 5px; } }
     .container .slider .slide-1 .phone-horiz .black-screen {
       top: -60px;
-      right: 163px;
+      right: 162px;
       -webkit-transform: rotate(90deg);
               transform: rotate(90deg); }
     @media screen and (max-width: 768px) {
