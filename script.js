@@ -51,6 +51,24 @@ const navByScrolling = () => {
   }
 }
 
+//  MENU HAMBURGER
+const burgermenu = () => {
+  let burgermenu = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > div.hamburger")
+  let logo = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > section")
+  let nav = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > nav")
+  let overlayMenuNav = document.querySelector(".overlay-nav-menu")
+
+  burgermenu.addEventListener('click', (e) => {
+    burgermenu.classList.toggle('active')
+    logo.classList.toggle('logo_active')
+    nav.classList.toggle('nav_active')
+    overlayMenuNav.classList.toggle('overlay-nav-menu_active')
+
+    // change on other click
+    document.body.style.overflow = 'hidden'
+  })
+}
+
 // // Courusel
 const carousel = () => {
   const carousel = document.querySelector('.carousel');
@@ -62,7 +80,7 @@ const carousel = () => {
   next.addEventListener('click', function() {
     direction = -1;
     carousel.style.justifyContent = 'flex-start';
-    slider.style.transform = 'translate(50%)';  
+    slider.style.transform = 'translate(-50%)';
   });
 
   prev.addEventListener('click', function() {
@@ -71,7 +89,7 @@ const carousel = () => {
       slider.appendChild(slider.firstElementChild);
     }
     carousel.style.justifyContent = 'flex-end';    
-    slider.style.transform = 'translate(50%)';  
+    slider.style.transform = 'translate(-50%)';  
   });
 
   slider.addEventListener('transitionend', function() {
@@ -244,65 +262,4 @@ const onSubmitGetValue = () => {
 
   document.body.style.overflow = 'hidden'
 }
-
-// Scroll window
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  MENU HAMBURGER
-const burgermenu = () => {
-  let burgermenu = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > div.hamburger")
-  let logo = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > section")
-  let nav = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > nav")
-  let overlayMenuNav = document.querySelector(".overlay-nav-menu")
-
-  burgermenu.addEventListener('click', (e) => {
-    burgermenu.classList.toggle('active')
-    logo.classList.add('logo_active')
-    nav.classList.add('nav_active')
-    overlayMenuNav.classList.add('nav_active')
-
-    // change on other click
-    document.body.style.overflow = 'hidden'
-  })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
