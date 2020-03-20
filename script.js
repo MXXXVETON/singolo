@@ -275,9 +275,9 @@ const burgermenu = () => {
 
   burgermenu.addEventListener('click', (e) => {
     burgermenu.classList.toggle('active')
-    logo.classList.add('logo_active')
-    nav.classList.add('nav_active')
-    overlayMenuNav.classList.add('nav_active')
+    logo.classList.toggle('logo_active')
+    nav.classList.toggle('nav_active')
+    overlayMenuNav.classList.toggle('overlay-nav-menu_active')
 
     // change on other click
     document.body.style.overflow = 'hidden'

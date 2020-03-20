@@ -125,16 +125,15 @@ header {
   }
 
   .overlay-nav-menu {
+    position: absolute;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100%;
-    position: absolute;
     z-index: 9;
     opacity: 0.6;
     background: #2D303A;
-
-    visibility: hidden;
+    display: none;
   }
 
   .hamburger {
@@ -228,7 +227,7 @@ header {
     }
 
     .overlay-nav-menu_active {
-      visibility: visible;
+      display: block;
     }
 
     nav {

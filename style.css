@@ -106,15 +106,15 @@ header {
       padding-bottom: 6px;
       padding-left: 2px; }
   header .overlay-nav-menu {
+    position: absolute;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100%;
-    position: absolute;
     z-index: 9;
     opacity: 0.6;
     background: #2D303A;
-    visibility: hidden; }
+    display: none; }
   header .hamburger {
     height: 20px;
     left: 23px;
@@ -197,7 +197,7 @@ header {
       header .nav_active {
         left: 0; }
       header .overlay-nav-menu_active {
-        visibility: visible; }
+        display: block; }
       header nav {
         position: absolute;
         top: 0;
