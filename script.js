@@ -62,7 +62,7 @@ const carousel = () => {
   next.addEventListener('click', function() {
     direction = -1;
     carousel.style.justifyContent = 'flex-start';
-    slider.style.transform = 'translate(-33.3%)';  
+    slider.style.transform = 'translate(50%)';  
   });
 
   prev.addEventListener('click', function() {
@@ -71,7 +71,7 @@ const carousel = () => {
       slider.appendChild(slider.firstElementChild);
     }
     carousel.style.justifyContent = 'flex-end';    
-    slider.style.transform = 'translate(33.3%)';  
+    slider.style.transform = 'translate(50%)';  
   });
 
   slider.addEventListener('transitionend', function() {
@@ -203,10 +203,8 @@ document.querySelector('.submit-btn').addEventListener('click', (e) => {
   let formName = document.querySelector("#name").value
   
   e.preventDefault()
-
-  if (formEmail !== /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/ && formEmail === '' || formName !== '') {
-    onSubmitGetValue()
-  }
+  onSubmitGetValue()
+  
 
 })
 

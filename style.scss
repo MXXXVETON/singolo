@@ -126,6 +126,8 @@ header {
 
   .overlay-nav-menu {
     width: 100%;
+    top: 0;
+    left: 0;
     height: 100%;
     position: absolute;
     z-index: 9;
@@ -325,7 +327,7 @@ header {
         margin-right: 60px;
         
         .black-screen {
-          top: 62px;
+          top: 64px;
           left: 13px;
           // visibility: hidden;
         }
@@ -362,7 +364,7 @@ header {
       .phone-horiz {
         .black-screen {
           top: -60px;
-          right: 163px;
+          right: 162px;
           transform: rotate(90deg);
           // visibility: hidden;
         }
@@ -375,7 +377,7 @@ header {
 
           .black-screen {
             top: -43px;
-            left: 98px;          
+            left: 98px;
           }
         }
 
