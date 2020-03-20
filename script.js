@@ -3,6 +3,9 @@ window.onload = function() {
   navByScrolling()
   addNavClickHandler()
 
+  // hamburger
+  burgermenu()
+
   // // Courusel
   // addCourusel()
 
@@ -13,7 +16,6 @@ window.onload = function() {
   rendorPartfolioItem()
 
   addBorderByItem()
-
 }
 
 // Main menu
@@ -23,6 +25,8 @@ const addNavClickHandler = () => {
   menu.addEventListener('click', (e) => {
     menu.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
     e.target.classList.add('active')
+
+    document.body.style.overflow = 'auto'
   })
 }
 
@@ -250,6 +254,27 @@ slider.addEventListener('transitionend', function() {
     slider.style.transition = 'all .7s';
   })
 }, false);
+
+
+
+
+//  MENU HAMBURGER
+const burgermenu = () => {
+  let burgermenu = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > div.hamburger")
+  let logo = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > section")
+  let nav = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > nav")
+  let overlayMenuNav = document.querySelector(".overlay-nav-menu")
+
+  burgermenu.addEventListener('click', (e) => {
+    burgermenu.classList.toggle('active')
+    logo.classList.add('logo_active')
+    nav.classList.add('nav_active')
+    overlayMenuNav.classList.add('nav_active')
+
+    // change on other click
+    document.body.style.overflow = 'hidden'
+  })
+}
 
 
 

@@ -74,6 +74,10 @@ p {
   }
 }
 
+.padding-0 {
+  padding: 0 !important;
+}
+
 .bg-darkblue{
   background: #2d303a;
 }
@@ -94,6 +98,7 @@ p {
 .under-line_white {
   background: #fff; 
 }
+
 .under-line_pink {
   background: #EA676B;
 }
@@ -109,6 +114,8 @@ header {
 
   .logo {
     text-transform: uppercase;
+    z-index: 999;
+    position: relative;
 
     &__title{
       color: #ffffff;
@@ -117,10 +124,44 @@ header {
     }
   }
 
+  .overlay-nav-menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    opacity: 0.6;
+    background: #2D303A;
+
+    visibility: hidden;
+  }
+
+  .hamburger {
+    height: 20px;
+    left: 23px;
+    top: 28px;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .7s;
+
+    .line {
+      width: 25px;
+      height: 2.4px;
+      border-radius: 5px;
+      background: #fff;
+    }
+  }
+
   nav {
     width: 374px;
     text-transform: uppercase;
     font-size: 18px;
+    position: relative;
+    transition: all 0.7;
 
     .nav-menu {
       display: flex;
@@ -167,8 +208,55 @@ header {
     padding: 1.3em 0;
     justify-content: center;
 
+    .hamburger {
+      visibility: visible;
+      z-index: 999;
+    }
+
+    .active {
+      transform: rotate(90deg);
+    }
+
+    .logo_active{
+      left: -10px;
+    }
+
+    .nav_active{
+      left: 0;
+    }
+
+    .overlay-nav-menu_active {
+      visibility: visible;
+    }
+
     nav {
-      display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    z-index: 99;
+    background: #2D303A;
+    box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+      ul#menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-direction: column;
+        line-height: 29px;
+        height: 260px;
+
+        li>a {
+          font-size: 24px;
+
+        }
+      }
     }
   }
 }
@@ -227,7 +315,7 @@ header {
           }
 
           @media screen and (max-width: 375px) {
-            width: 69px;
+            width: 72px;
             height: 122px;
           }
         }
@@ -237,7 +325,7 @@ header {
         margin-right: 60px;
         
         .black-screen {
-          top: 63px;
+          top: 62px;
           left: 13px;
           // visibility: hidden;
         }
@@ -260,7 +348,7 @@ header {
           margin-right: 10px;
 
           img {
-            width: 88px;
+            width: 90px;
             height: 177px;
           }
 
@@ -310,7 +398,7 @@ header {
   .arrow {
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0,-50%);
     cursor: pointer;
 
     @media screen and (max-width: 375px) {
@@ -321,14 +409,15 @@ header {
   }
 
   .prev {
-    left: -15px;
+    left: 15px;
+    
   }
 
   .next {
-    right: -25px;
+    right: 15px;
   }
 
-  @media screen and (max-width: 765px) {
+  @media screen and (max-width: 768px) {
     .container {
       height: 447px;
     }
@@ -340,181 +429,6 @@ header {
     }
   }
 }
-
-// .corusel-container {
-//   position: relative;
-//   overflow: hidden;
-//   height: 600px;
-
-//   .corusel-slide{
-//     position: relative;
-//     left: 0;
-//     overflow: hidden;
-//     height: 100%;
-//     transition: ease-out 0.5s;
-//   }
-
-//   .item {
-//     float: left;
-//   }
-
-//   .arrow-back,
-//   .arrow-next {
-//     position: absolute;
-//     width: 20px;
-//     height: 40px;
-//     top: 50%;
-//     transform: translate(0, -50%);
-//     z-index: 10;
-//     cursor: pointer;
-//   }
-
-//   .arrow-back {
-//     left: 40px;
-//     background-image: url('./asets/left-arrow.png');
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-
-//   .arrow-next {
-//     right: 38px;
-//     background-image: url('./asets/right-arrow.png');
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-
-//   .phones {
-//     width: 944px;
-//     height: 100%;
-//     background: #f06c64;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     transition: linear 1s;
-
-//     &__horizontal {
-//       position: relative;
-//       padding-left: 55px;
-//        margin-bottom: 3px;
-
-//        .blackscreen_h{
-//         width: 195px;
-//         height: 336px;
-//         position: absolute;
-//         right: 160px;
-//         top: -58px;
-//         background: black;
-//         z-index: 99;
-//         visibility: hidden;
-//         -webkit-transform: rotate(90deg);
-//         transform: rotate(90deg);
-//      }
-
-//       #home_horizontal {
-//         position: absolute;
-//         z-index: 99;
-//         top: 85px;
-//         left: 62px;
-//         cursor: pointer;
-//         width: 45px;
-//         height: 45px;
-//         border-radius: 50%;
-//       }
-
-//       .active {
-//         visibility: visible;
-//       }
-//     }
-
-//     &__vertical{
-//       position: relative;
-//       padding-right: 18px;
-//        margin-bottom: 3px;
-
-//       .blackscreen{
-//         width: 195px;
-//         height: 336px;
-//         position: absolute;
-//         left: 10px;
-//         top: 63px;
-//         background: black;
-//         z-index: 99;
-//         visibility: hidden;
-//        }
-
-//        #home {
-//         position: absolute;
-//         z-index: 99;
-//         bottom: 35px;
-//         left: 85px;
-//         cursor: pointer;
-//         width: 45px;
-//         height: 45px;
-//         border-radius: 50%;
-//       }
-
-//       .active {
-//         visibility: visible;
-//       }
-//     }
-//   }
-
-//   .blue-screen {
-//     width: 944px;
-//     height: 100%;
-//     background: #648BF0;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//     transition: linear 1s;
-
-//     .phones-left{
-//       position: absolute;
-//       top: 161px;
-//       left: 243px;
-//     }
-
-//     .phones-center{
-//       position: absolute;
-//       top: 50px;
-//       left: 50%;
-//       transform: translate(-50%, -0%);
-
-//       .blackscreen_blue-h{
-//         width: 205px;
-//         height: 363px;
-//         position: absolute;
-//         left: 13px;
-//         top: 63px;
-//         background: black;
-//         z-index: 99;
-//         visibility: hidden;
-//       }
-
-//       #home-btn{
-//         position: absolute;
-//         z-index: 99;
-//         bottom: 35px;
-//         left: 90px;
-//         cursor: pointer;
-//         width: 50px;
-//         height: 50px;
-//         border-radius: 50%;
-//       }
-
-//       .active {
-//         visibility: visible;
-//       }
-//     }
-
-//     .phones-right{
-//       position: absolute;
-//       top: 160px;
-//       right: 251px;
-//     }
-//   }
-// }
 
 .services {
   display: flex;
