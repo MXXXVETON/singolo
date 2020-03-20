@@ -601,10 +601,11 @@ header {
     .form-quote #getQuote input[type=text],
     .form-quote #getQuote input[type=email],
     .form-quote #getQuote textarea[name=describe] {
-      color: #f48c8f; }
+      background-color: #d6564f !important;
+      color: #f48c8f !important; }
     .form-quote #getQuote input {
       border: none;
-      background: #d6564f;
+      background: #d6564f !important;
       border-radius: 5px;
       height: 38px;
       font-size: 10px;

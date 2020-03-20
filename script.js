@@ -7,7 +7,7 @@ window.onload = function() {
   burgermenu()
 
   // // Courusel
-  // addCourusel()
+  carousel()
 
   // TAGS
   addTagsClickHandler()
@@ -52,7 +52,42 @@ const navByScrolling = () => {
 }
 
 // // Courusel
+const carousel = () => {
+  const carousel = document.querySelector('.carousel');
+  const slider = document.querySelector('.slider');
+  const next = document.querySelector('.next');
+  const prev = document.querySelector('.prev');
+  let direction;
 
+  next.addEventListener('click', function() {
+    direction = -1;
+    carousel.style.justifyContent = 'flex-start';
+    slider.style.transform = 'translate(-33.3%)';  
+  });
+
+  prev.addEventListener('click', function() {
+    if (direction === -1) {
+      direction = 1;
+      slider.appendChild(slider.firstElementChild);
+    }
+    carousel.style.justifyContent = 'flex-end';    
+    slider.style.transform = 'translate(33.3%)';  
+  });
+
+  slider.addEventListener('transitionend', function() {
+    if (direction === 1) {
+      slider.prepend(slider.lastElementChild);
+    } else {
+      slider.appendChild(slider.firstElementChild);
+    }
+    
+    slider.style.transition = 'none';
+    slider.style.transform = 'translate(0)';
+    setTimeout(() => {
+      slider.style.transition = 'all .7s';
+    })
+  }, false);
+}
 
 // potfolio, portfolio TAGS, portfolio item...
 const addTagsClickHandler = () => {
@@ -164,8 +199,15 @@ const addBorderByItem = ()=>{
 
 // Form return MODALwindow
 document.querySelector('.submit-btn').addEventListener('click', (e) => {
+  let formEmail = document.querySelector("#email").value
+  let formName = document.querySelector("#name").value
+  
   e.preventDefault()
-  onSubmitGetValue()
+
+  if (formEmail !== /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/ && formEmail === '' || formName !== '') {
+    onSubmitGetValue()
+  }
+
 })
 
 // Modal content
@@ -196,8 +238,10 @@ const onSubmitGetValue = () => {
   
 
   document.querySelector('#modal__btn').addEventListener('click', () => {
+  
     document.querySelector('.overlay').style.visibility = 'hidden'
     document.body.style.overflow = 'auto'
+    
   })
 
   document.body.style.overflow = 'hidden'
@@ -220,40 +264,6 @@ const onSubmitGetValue = () => {
 
 
 
-const carousel = document.querySelector('.carousel');
-const slider = document.querySelector('.slider');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
-let direction;
-
-next.addEventListener('click', function() {
-  direction = -1;
-  carousel.style.justifyContent = 'flex-start';
-  slider.style.transform = 'translate(-33.3%)';  
-});
-
-prev.addEventListener('click', function() {
-  if (direction === -1) {
-    direction = 1;
-    slider.appendChild(slider.firstElementChild);
-  }
-  carousel.style.justifyContent = 'flex-end';    
-  slider.style.transform = 'translate(33.3%)';  
-});
-
-slider.addEventListener('transitionend', function() {
-  if (direction === 1) {
-    slider.prepend(slider.lastElementChild);
-  } else {
-    slider.appendChild(slider.firstElementChild);
-  }
-  
-  slider.style.transition = 'none';
-  slider.style.transform = 'translate(0)';
-  setTimeout(() => {
-    slider.style.transition = 'all .7s';
-  })
-}, false);
 
 
 

@@ -738,12 +738,13 @@ header {
     input[type=text],
     input[type=email],
     textarea[name=describe] {
-      color: #f48c8f;
+      background-color:#d6564f !important;
+      color: #f48c8f !important;
     }
 
     input {
       border: none;
-      background: #d6564f;
+      background: #d6564f !important;
       border-radius: 5px;
       height: 38px;
       font-size: 10px;
