@@ -231,11 +231,11 @@ const openModalWindow = () => {
 
   if (subject === '') {
     subject = 'No subject'
-  } else {subject}
+  }
 
   if (describe === '') {
     describe = 'No description'
-  } else {describe}
+  }
 
   modal.insertAdjacentHTML("beforeend", `<p class="modal__aception">The letter was sent</p>`);
   modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-title">${subject}</p>`);

@@ -235,7 +235,7 @@ header {
     color: #f06c64;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     padding: 1.3em 0;
     justify-content: center;
 
@@ -583,6 +583,7 @@ header {
                           "a a a"
                           "a a a"
                           "a a a";
+      grid-gap: 0;
     }
 
     @media screen and (max-width: 375px) {
@@ -590,6 +591,7 @@ header {
                           "a a"
                           "a a"
                           "a a";
+      grid-gap: 0;
     }
 
     .work-item {
@@ -630,7 +632,7 @@ header {
     grid-template-areas: "a a a";
     grid-gap: 20px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       grid-template-areas: "a";
     }
   }
@@ -667,9 +669,13 @@ header {
 
   .persone-item__social {
     width: 152px;
-    padding-top: 1px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    
+    @media screen and (max-width: 568px) {
+      width: 100%;
+      justify-content: space-around;
+    }
   }
   }
 
