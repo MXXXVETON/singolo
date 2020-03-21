@@ -11,7 +11,7 @@
   <div class="main">
 
     <!-- HEADER -->
-    <div class="bg-darkblue">
+    <div class="bg-darkblue pos-fixed">
       <div class="content-wrapper">
         <header>
           <section class="logo">
@@ -52,53 +52,49 @@
     </div>
 
     <!-- COURUSEL -->
-    <div class="bg-pink">
-      <div class="content-wrapper padding-0">
-        <div class="container">
-          <div class="carousel">
-            <div class="slider">
-              <section	class="slide-1">
-                <div class="phone phone-vert">
+    <div class="bg-pink pt-1">
+      <div class="container">
+        <div class="carousel">
+          <div class="slider">
+            <section	class="slide-1">
+              <div class="phone phone-vert">
+                <img src="./asets/iphone-vertical.png" alt="">
+
+                <span class="black-screen"></span>
+              </div>
+
+              <div class="phone phone-horiz">
+                <img src="./asets/iphone-horizontal.png" alt="">
+
+                <span class="black-screen"></span>
+              </div>
+            </section>
+
+            <section	class="slide-2">
+              <div class="box">
+                <div class="phone-left">
                   <img src="./asets/iphone-vertical.png" alt="">
-
-                  <span class="black-screen"></span>
-                  <span class="home-button"></span>
                 </div>
-
-                <div class="phone phone-horiz">
-                  <img src="./asets/iphone-horizontal.png" alt="">
-
-                  <span class="black-screen"></span>
-                  <span class="home-button"></span>
+                
+                <div class="phone-center">
+                  <img src="./asets/phone-green-screen.png" alt="">
+                  <div class="black-screen"></div>
                 </div>
-              </section>
-
-              <section	class="slide-2">
-                <div class="box">
-                  <div class="phone-left">
-                    <img src="./asets/iphone-vertical.png" alt="">
-                  </div>
-                  
-                  <div class="phone-center">
-                    <img src="./asets/phone-green-screen.png" alt="">
-                    <div class="black-screen"></div>
-                  </div>
-                  
-                  <div class="phone-right">
-                    <img src="./asets/iphone-vertical.png" alt="">
-                  </div>
+                
+                <div class="phone-right">
+                  <img src="./asets/iphone-vertical.png" alt="">
                 </div>
-              </section>
-            </div>
+              </div>
+            </section>
           </div>
+        </div>
 
-          <div class="arrow prev">
-            <img src="./asets/arrow-left.svg" alt="">
-          </div>
-          
-          <div class="arrow next">
-            <img src="./asets/arrow-right.svg" alt="">
-          </div>
+        <div class="arrow prev">
+          <img src="./asets/arrow-left.svg" alt="">
+        </div>
+        
+        <div class="arrow next">
+          <img src="./asets/arrow-right.svg" alt="">
         </div>
       </div>
       <div class="under-line under-line_pink"></div>
@@ -166,7 +162,7 @@
               </div>
             </div>
     
-            <div class="menu-list pt-1">
+            <div class="menu-list">
               <div class="menu-list__img">
                 <img src="./asets/phone.png" alt="">
               </div>
@@ -181,7 +177,7 @@
               </div>
             </div>
     
-            <div class="menu-list pt-1">
+            <div class="menu-list">
               <div class="menu-list__img">
                 <img src="./asets/bubble.png" alt="">
               </div>
@@ -196,7 +192,7 @@
               </div>
             </div>
     
-            <div class="menu-list pt-1">
+            <div class="menu-list">
               <div class="menu-list__img">
                 <img src="./asets/star.png" alt="">
               </div>
@@ -383,15 +379,15 @@
             <div class="wrap form">
     
               <form id="getQuote" action="#" method="POST">
-                <input value="" type="text" id="name" name="name" required pattern="[A-Za-zА-Яа-яЁё\s]+"placeholder="Name (Required)">
-    
-                <input value="" type="email" id="email" name="email" requiredpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email (Required)">
-    
-                <input value="" type="text" id="subject" name="subject" placeholder="Subject">
+                <input type="text" id="name" required placeholder="Name">
                 
-                <textarea aria-valuetext="" id="describe" name="describe" placeholder="Describe your project in detail..." cols="30" rows="10"></textarea>
-    
-                <button class="submit-btn">Submit</button>
+                <input type="email" id="email" required placeholder="Email">
+                
+                <input type="text" id="subject" placeholder="Subject">  
+                
+                <textarea aria-valuetext="" id="describe" placeholder="Describe your project in detail..." maxlength="250"></textarea>
+              
+                <button class="submit-btn" type="submit">Submit</button>
               </form>
             </div>
     

@@ -61,8 +61,13 @@ p {
     .content-wrapper {
       padding: 0 30px; } }
 
-.padding-0 {
-  padding: 0 !important; }
+.pos-fixed {
+  position: fixed;
+  z-index: 999;
+  width: 100%; }
+
+.pt-1 {
+  padding-top: 100px; }
 
 .bg-darkblue {
   background: #2d303a; }
@@ -283,6 +288,7 @@ header {
           -ms-flex-pack: center;
               justify-content: center; }
     .container .slider .slide-1 .phone {
+      float: left;
       position: relative; }
       .container .slider .slide-1 .phone .black-screen {
         position: absolute;
@@ -368,14 +374,12 @@ header {
             width: 100%; }
           .container .slider .slide-2 .box .phone-center .black-screen {
             position: absolute;
-            top: 68px;
-            left: 14px;
-            width: 79%;
+            top: 13%;
+            left: 5%;
+            width: 80%;
             height: 69%;
             background: #000;
             visibility: hidden; }
-        .container .slider .slide-2 .box .black-screen.active {
-          visibility: visible; }
         .container .slider .slide-2 .box .phone-right {
           position: absolute;
           opacity: 0.6;
@@ -383,6 +387,8 @@ header {
           width: 100%; }
           .container .slider .slide-2 .box .phone-right img {
             width: 75%; }
+        .container .slider .slide-2 .box .black-screen.active {
+          visibility: visible; }
         @media screen and (max-width: 768px) {
           .container .slider .slide-2 .box {
             width: 35%; } }
@@ -460,8 +466,6 @@ header {
         margin-bottom: 3px;
         font-weight: 900;
         font-size: 18px; }
-  .services .pt-1 {
-    margin-top: -4px; }
 
 .portfolio {
   background: #2d303a;
@@ -759,9 +763,9 @@ footer {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    min-width: 340px;
+    min-width: 200px;
     max-width: 500px;
-    min-height: 200px;
+    min-height: 100px;
     background: #ccc;
     overflow: hidden;
     border-radius: 5px;
@@ -773,8 +777,8 @@ footer {
       text-align: justify;
       word-break: break-word; }
     .overlay .modal__mail-text {
-      height: 200px;
-      overflow-y: scroll; }
+      max-height: 200px;
+      overflow: hidden; }
   .overlay #modal__btn {
     position: absolute;
     bottom: 15px;

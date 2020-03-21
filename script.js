@@ -2,8 +2,8 @@ window.onload = function() {
   // MENU NAV
   addNavClickHandler()
 
-  // HAMBURGER
-  
+  // form
+  formRequest()
 
   //CAROUSEL
   carousel()
@@ -199,74 +199,90 @@ const addBorderByItem = ()=>{
   })
 }
 
-// FORM return MODALwindow
-document.querySelector('.submit-btn').addEventListener('click', (e) => {
-  let formEmail = document.querySelector("#email").value
-  let formName = document.querySelector("#name").value
-  
-  e.preventDefault()
-  onSubmitGetValue()
-  
+// Form
+const formRequest = () => {
+  const form = document.getElementById('getQuote');
+  // requaer
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
 
-})
+  form.onsubmit = submit;
 
-// MODAL content
-const onSubmitGetValue = () => {
-  let formDataSubject = document.querySelector("#subject").value
-  let formDataText = document.querySelector("#describe").value
-  let modal = document.querySelector('.modal')
+  function submit(e) {
+    e.preventDefault();
+
+    openModalWindow()
+
+    form.reset()
+  };
+}
+
+const openModalWindow = () => {
+  let overlay = document.querySelector('.overlay');
+  let modal = document.querySelector('.modal');
+  // check on value
+  let subject = document.getElementById('subject').value;
+  let describe = document.getElementById('describe').value;
+  // 
+
+  modal.style.visibility = 'visible';
+  overlay.style.visibility = 'visible';
 
   while(modal.firstChild) {
     modal.removeChild(modal.firstChild);
   }
 
-  if (formDataSubject === '') {
-    formDataSubject = 'Без темы'
-  } else {formDataSubject}
+  if (subject === '') {
+    subject = 'No subject'
+  } else {subject}
 
-  if (formDataText === '') {
-    formDataText = 'Без описания'
-  } else {formDataText}
+  if (describe === '') {
+    describe = 'No description'
+  } else {describe}
 
-  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__aception">Письмо отправлено</p> <br>`)
-  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en" class="modal__mail-title">Тема: ${formDataSubject}</p>`)
-  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__mail-text">Описание: ${formDataText}</p>`)
-  modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`)
-
-
-  document.querySelector('.overlay').style.visibility = 'visible'
-  
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__aception">The letter was sent</p>`);
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-title">${subject}</p>`);
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-text">${describe}</p>`);
+  modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`);
 
   document.querySelector('#modal__btn').addEventListener('click', () => {
-  
     document.querySelector('.overlay').style.visibility = 'hidden'
+    document.querySelector('.modal').style.visibility = 'hidden'
     document.body.style.overflow = 'auto'
-    
+  })
+
+  document.querySelector('.overlay').addEventListener('click', () => {
+    document.querySelector('.overlay').style.visibility = 'hidden'
+    document.querySelector('.modal').style.visibility = 'hidden'
+    document.body.style.overflow = 'auto'
   })
 
   document.body.style.overflow = 'hidden'
-}
+};
 
-const tapOnPhone =  () => {
-  let centralPhone =  document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-2 > div > div.phone-center")
-  let offScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-2 > div > div.phone-center > div")
-  let phoneVertical = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-vert")
-  let phoneHorizontal = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-horiz")
-  let vertOffScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-vert > span.black-screen")
-  let horizontalOffScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-horiz > span.black-screen")
+
+
+const tapOnPhone = () => {
+  let centralPhone =  document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-2 > div > div.phone-center > img")
+  // let phoneVertical = document.querySelector("")
+  // let phoneHorizontal = document.querySelector("")
+  
+  let centralPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-2 > div > div.phone-center > div")
+  // let vertPhoneOffScreen = document.querySelector("")
+  // let horizontalPhoneOffScreen = document.querySelector("")
 
 
   centralPhone.addEventListener('click', () => {
-    offScreen.classList.toggle("active")
+    centralPhoneOffScreen.classList.toggle("active")
   })
 
-  phoneVertical.addEventListener('click', () => {
-    vertOffScreen.classList.toggle("active")
-  })
+  // phoneVertical.addEventListener('click', () => {
+  //   vertPhoneOffScreen.classList.toggle("active")
+  // })
 
-  phoneHorizontal.addEventListener('click', () => {
-    horizontalOffScreen.classList.toggle("active")
-  })
+  // phoneHorizontal.addEventListener('click', () => {
+  //   horizontalPhoneOffScreen.classList.toggle("active")
+  // })
 }
 
 
@@ -289,4 +305,63 @@ const tapOnPhone =  () => {
 //       }
 //     })
 //   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FORM return MODALwindow
+// document.querySelector('.submit-btn').addEventListener('click', (e) => {
+//   let formEmail = document.querySelector("#email").value
+//   let formName = document.querySelector("#name").value
+  
+//   e.preventDefault()
+//   onSubmitGetValue()
+// })
+
+// // MODAL content
+// const onSubmitGetValue = () => {
+//   let formDataSubject = document.querySelector("#subject").value
+//   let formDataText = document.querySelector("#describe").value
+//   let modal = document.querySelector('.modal')
+
+//   while(modal.firstChild) {
+//     modal.removeChild(modal.firstChild);
+//   }
+
+//   if (formDataSubject === '') {
+//     formDataSubject = 'Без темы'
+//   } else {formDataSubject}
+
+//   if (formDataText === '') {
+//     formDataText = 'Без описания'
+//   } else {formDataText}
+
+//   modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__aception">Письмо отправлено</p> <br>`)
+//   modal.insertAdjacentHTML("beforeend", `<p lang="ru-en" class="modal__mail-title">Тема: ${formDataSubject}</p>`)
+//   modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__mail-text">Описание: ${formDataText}</p>`)
+//   modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`)
+
+
+//   document.querySelector('.overlay').style.visibility = 'visible'
+  
+
+//   document.querySelector('#modal__btn').addEventListener('click', () => {
+  
+//     document.querySelector('.overlay').style.visibility = 'hidden'
+//     document.body.style.overflow = 'auto'
+    
+//   })
+
+//   document.body.style.overflow = 'hidden'
 // }
