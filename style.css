@@ -189,7 +189,7 @@ header {
       header .hamburger {
         visibility: visible;
         z-index: 999; }
-      header .active {
+      header .hamburger.active {
         -webkit-transform: rotate(90deg);
                 transform: rotate(90deg); }
       header .logo_active {
@@ -239,7 +239,9 @@ header {
           line-height: 29px;
           height: 260px; }
           header nav ul#menu li > a {
-            font-size: 24px; } }
+            font-size: 24px; }
+          header nav ul#menu span {
+            display: none; } }
 
 .container {
   position: relative;
@@ -287,7 +289,8 @@ header {
         content: '';
         width: 190px;
         height: 335px;
-        background: #000; }
+        background: #000;
+        visibility: hidden; }
         @media screen and (max-width: 768px) {
           .container .slider .slide-1 .phone .black-screen {
             width: 142px;
@@ -296,6 +299,8 @@ header {
           .container .slider .slide-1 .phone .black-screen {
             width: 72px;
             height: 122px; } }
+      .container .slider .slide-1 .phone .black-screen.active {
+        visibility: visible; }
     .container .slider .slide-1 .phone-vert {
       margin-right: 60px; }
       .container .slider .slide-1 .phone-vert .black-screen {
@@ -338,6 +343,49 @@ header {
       .container .slider .slide-1 .phone-horiz .black-screen {
         top: -22px;
         left: 48px; } }
+    .container .slider .slide-2 {
+      background: #648BF0; }
+      .container .slider .slide-2 .box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .container .slider .slide-2 .box .phone-left {
+          position: absolute;
+          opacity: 0.6;
+          right: -90%;
+          width: 100%; }
+          .container .slider .slide-2 .box .phone-left img {
+            width: 75%; }
+        .container .slider .slide-2 .box .phone-center {
+          position: relative;
+          z-index: 99;
+          width: 100%; }
+          .container .slider .slide-2 .box .phone-center img {
+            width: 100%; }
+          .container .slider .slide-2 .box .phone-center .black-screen {
+            position: absolute;
+            top: 68px;
+            left: 14px;
+            width: 79%;
+            height: 69%;
+            background: #000;
+            visibility: hidden; }
+        .container .slider .slide-2 .box .black-screen.active {
+          visibility: visible; }
+        .container .slider .slide-2 .box .phone-right {
+          position: absolute;
+          opacity: 0.6;
+          left: -66%;
+          width: 100%; }
+          .container .slider .slide-2 .box .phone-right img {
+            width: 75%; }
+        @media screen and (max-width: 768px) {
+          .container .slider .slide-2 .box {
+            width: 35%; } }
   .container .arrow {
     position: absolute;
     top: 50%;
