@@ -2,9 +2,6 @@ window.onload = function() {
   // MENU NAV
   addNavClickHandler()
 
-  // HAMBURGER
-  
-
   //CAROUSEL
   carousel()
   tapOnPhone()
@@ -15,6 +12,9 @@ window.onload = function() {
   // PORTFOLIO rendor default content
   rendorPartfolioItem()
   addBorderByItem()
+
+  // form
+  formRequest()
 }
 
 // Main menu
@@ -23,12 +23,12 @@ const addNavClickHandler = () => {
   let menu = document.querySelector('#menu')
 
   menu.addEventListener('click', (e) => {
-    menu.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
+    menu.querySelectorAll('li>a').forEach((el) => {
+      el.classList.remove('active')
+    })
+
     e.target.classList.add('active')
 
-
-
-    document.body.style.overflow = 'auto'
   })
 
   burgermenu()
@@ -47,9 +47,6 @@ const burgermenu = () => {
     logo.classList.toggle('logo_active')
     nav.classList.toggle('nav_active')
     overlayMenuNav.classList.toggle('overlay-nav-menu_active')
-
-    // change on other click
-    document.body.style.overflow = 'hidden'
   })
 }
 
@@ -199,75 +196,89 @@ const addBorderByItem = ()=>{
   })
 }
 
-// FORM return MODALwindow
-document.querySelector('.submit-btn').addEventListener('click', (e) => {
-  let formEmail = document.querySelector("#email").value
-  let formName = document.querySelector("#name").value
-  
-  e.preventDefault()
-  onSubmitGetValue()
-  
+// Form
+const formRequest = () => {
+  const form = document.getElementById('getQuote');
+  // requaer
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
 
-})
+  form.onsubmit = submit;
 
-// MODAL content
-const onSubmitGetValue = () => {
-  let formDataSubject = document.querySelector("#subject").value
-  let formDataText = document.querySelector("#describe").value
-  let modal = document.querySelector('.modal')
+  function submit(e) {
+    e.preventDefault();
+
+    openModalWindow()
+
+    form.reset()
+  };
+}
+
+const openModalWindow = () => {
+  let overlay = document.querySelector('.overlay');
+  let modal = document.querySelector('.modal');
+  // check on value
+  let subject = document.getElementById('subject').value;
+  let describe = document.getElementById('describe').value;
+  // 
+
+  modal.style.visibility = 'visible';
+  overlay.style.visibility = 'visible';
 
   while(modal.firstChild) {
     modal.removeChild(modal.firstChild);
   }
 
-  if (formDataSubject === '') {
-    formDataSubject = 'Без темы'
-  } else {formDataSubject}
+  if (subject === '') {
+    subject = 'No subject'
+  } else {subject}
 
-  if (formDataText === '') {
-    formDataText = 'Без описания'
-  } else {formDataText}
+  if (describe === '') {
+    describe = 'No description'
+  } else {describe}
 
-  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__aception">Письмо отправлено</p> <br>`)
-  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en" class="modal__mail-title">Тема: ${formDataSubject}</p>`)
-  modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__mail-text">Описание: ${formDataText}</p>`)
-  modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`)
-
-
-  document.querySelector('.overlay').style.visibility = 'visible'
-  
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__aception">The letter was sent</p>`);
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-title">${subject}</p>`);
+  modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-text">${describe}</p>`);
+  modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`);
 
   document.querySelector('#modal__btn').addEventListener('click', () => {
-  
     document.querySelector('.overlay').style.visibility = 'hidden'
+    document.querySelector('.modal').style.visibility = 'hidden'
     document.body.style.overflow = 'auto'
-    
+  })
+
+  document.querySelector('.overlay').addEventListener('click', () => {
+    document.querySelector('.overlay').style.visibility = 'hidden'
+    document.querySelector('.modal').style.visibility = 'hidden'
+    document.body.style.overflow = 'auto'
   })
 
   document.body.style.overflow = 'hidden'
-}
+};
 
-const tapOnPhone =  () => {
-  let centralPhone =  document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-2 > div > div.phone-center")
-  let offScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-2 > div > div.phone-center > div")
-  let phoneVertical = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-vert")
-  let phoneHorizontal = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-horiz")
-  let vertOffScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-vert > span.black-screen")
-  let horizontalOffScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-horiz > span.black-screen")
+const tapOnPhone = () => {
+  let centralPhone =  document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-2 > div > div.phone-center > img")
+  let phoneVertical = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-vert > img")
+  let phoneHorizontal = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-horiz > img")
+  
+  let centralPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-2 > div > div.phone-center > div")
+  let vertPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-vert > div")
+  let horizontalPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-horiz > div")
 
 
   centralPhone.addEventListener('click', () => {
-    offScreen.classList.toggle("active")
+    centralPhoneOffScreen.classList.toggle("active")
   })
 
   phoneVertical.addEventListener('click', () => {
-    vertOffScreen.classList.toggle("active")
+    vertPhoneOffScreen.classList.toggle("active")
   })
 
   phoneHorizontal.addEventListener('click', () => {
-    horizontalOffScreen.classList.toggle("active")
+    horizontalPhoneOffScreen.classList.toggle("active")
   })
-}
+};
 
 
 // const navByScrolling = () => {

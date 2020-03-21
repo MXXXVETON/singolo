@@ -59,10 +59,18 @@ p {
   padding: 0 40px; }
   @media screen and (max-width: 375px) {
     .content-wrapper {
-      padding: 0 30px; } }
+      padding: 0 25px; } }
 
-.padding-0 {
-  padding: 0 !important; }
+.pos-fixed {
+  position: fixed;
+  z-index: 999;
+  width: 100%; }
+
+.pt-1 {
+  padding-top: 100px; }
+  @media screen and (max-width: 375px) {
+    .pt-1 {
+      padding-top: 80px; } }
 
 .bg-darkblue {
   background: #2d303a; }
@@ -197,7 +205,9 @@ header {
       header .nav_active {
         left: 0; }
       header .overlay-nav-menu_active {
-        display: block; }
+        display: block;
+        height: 100vh;
+        z-index: 99; }
       header nav {
         position: absolute;
         top: 0;
@@ -282,67 +292,36 @@ header {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
-    .container .slider .slide-1 .phone {
-      position: relative; }
-      .container .slider .slide-1 .phone .black-screen {
+    .container .slider .slide-1 {
+      padding: 0 40px; }
+      .container .slider .slide-1 .phone {
+        float: left;
+        position: relative; }
+        .container .slider .slide-1 .phone img {
+          width: 100%; }
+      .container .slider .slide-1 .phone-vert .black-screen {
         position: absolute;
         content: '';
-        width: 190px;
-        height: 335px;
         background: #000;
+        width: 79%;
+        height: 68.7%;
+        top: 13%;
+        left: 5.4%;
         visibility: hidden; }
-        @media screen and (max-width: 768px) {
-          .container .slider .slide-1 .phone .black-screen {
-            width: 142px;
-            height: 249px; } }
-        @media screen and (max-width: 375px) {
-          .container .slider .slide-1 .phone .black-screen {
-            width: 72px;
-            height: 122px; } }
-      .container .slider .slide-1 .phone .black-screen.active {
+      .container .slider .slide-1 .phone-horiz {
+        margin-left: 10%; }
+        .container .slider .slide-1 .phone-horiz .black-screen {
+          position: absolute;
+          content: '';
+          background: #000;
+          width: 70%;
+          height: 78%;
+          top: 5%;
+          left: 12%;
+          visibility: hidden; }
+      .container .slider .slide-1 .black-screen.active,
+      .container .slider .slide-1 .black-screen.active {
         visibility: visible; }
-    .container .slider .slide-1 .phone-vert {
-      margin-right: 60px; }
-      .container .slider .slide-1 .phone-vert .black-screen {
-        top: 64px;
-        left: 13px; }
-      @media screen and (max-width: 768px) {
-        .container .slider .slide-1 .phone-vert {
-          margin-right: 25px; }
-          .container .slider .slide-1 .phone-vert img {
-            width: 180px;
-            height: 360px; }
-          .container .slider .slide-1 .phone-vert .black-screen {
-            top: 48px;
-            left: 10px; } }
-      @media screen and (max-width: 375px) {
-        .container .slider .slide-1 .phone-vert {
-          margin-right: 10px; }
-          .container .slider .slide-1 .phone-vert img {
-            width: 90px;
-            height: 177px; }
-          .container .slider .slide-1 .phone-vert .black-screen {
-            top: 24px;
-            left: 5px; } }
-    .container .slider .slide-1 .phone-horiz .black-screen {
-      top: -60px;
-      right: 162px;
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
-    @media screen and (max-width: 768px) {
-      .container .slider .slide-1 .phone-horiz img {
-        width: 360px;
-        height: 180px; }
-      .container .slider .slide-1 .phone-horiz .black-screen {
-        top: -43px;
-        left: 98px; } }
-    @media screen and (max-width: 375px) {
-      .container .slider .slide-1 .phone-horiz img {
-        width: 177px;
-        height: 88px; }
-      .container .slider .slide-1 .phone-horiz .black-screen {
-        top: -22px;
-        left: 48px; } }
     .container .slider .slide-2 {
       background: #648BF0; }
       .container .slider .slide-2 .box {
@@ -368,14 +347,12 @@ header {
             width: 100%; }
           .container .slider .slide-2 .box .phone-center .black-screen {
             position: absolute;
-            top: 68px;
-            left: 14px;
-            width: 79%;
+            top: 13%;
+            left: 5%;
+            width: 80%;
             height: 69%;
             background: #000;
             visibility: hidden; }
-        .container .slider .slide-2 .box .black-screen.active {
-          visibility: visible; }
         .container .slider .slide-2 .box .phone-right {
           position: absolute;
           opacity: 0.6;
@@ -383,6 +360,8 @@ header {
           width: 100%; }
           .container .slider .slide-2 .box .phone-right img {
             width: 75%; }
+        .container .slider .slide-2 .box .black-screen.active {
+          visibility: visible; }
         @media screen and (max-width: 768px) {
           .container .slider .slide-2 .box {
             width: 35%; } }
@@ -400,10 +379,10 @@ header {
   .container .next {
     right: 15px; }
   @media screen and (max-width: 768px) {
-    .container .container {
+    .container {
       height: 447px; } }
   @media screen and (max-width: 375px) {
-    .container .container {
+    .container {
       height: 220px; } }
 
 .services {
@@ -460,8 +439,6 @@ header {
         margin-bottom: 3px;
         font-weight: 900;
         font-size: 18px; }
-  .services .pt-1 {
-    margin-top: -4px; }
 
 .portfolio {
   background: #2d303a;
@@ -498,6 +475,14 @@ header {
     .portfolio__tags-menu .active {
       border-color: #BBBBBB;
       color: #BBBBBB; }
+    @media screen and (max-width: 375px) {
+      .portfolio__tags-menu {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: auto; } }
+    .portfolio__tags-menu .tag {
+      display: block;
+      margin-top: 5px; }
   .portfolio__work {
     display: grid;
     grid-template-areas: "a a a a" "a a a a" "a a a a";
@@ -759,9 +744,9 @@ footer {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    min-width: 340px;
+    min-width: 200px;
     max-width: 500px;
-    min-height: 200px;
+    min-height: 100px;
     background: #ccc;
     overflow: hidden;
     border-radius: 5px;
@@ -773,8 +758,8 @@ footer {
       text-align: justify;
       word-break: break-word; }
     .overlay .modal__mail-text {
-      height: 200px;
-      overflow-y: scroll; }
+      max-height: 200px;
+      overflow: hidden; }
   .overlay #modal__btn {
     position: absolute;
     bottom: 15px;
