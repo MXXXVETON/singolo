@@ -136,6 +136,10 @@ header {
     }
   }
 
+  .logo.active{
+    left: -10px;
+  }
+
   .overlay-nav-menu {
     position: absolute;
     width: 100%;
@@ -146,6 +150,12 @@ header {
     opacity: 0.6;
     background: #2D303A;
     display: none;
+  }
+
+  .overlay-nav-menu.active {
+    display: block;
+    height: 100vh;
+    z-index: 99;
   }
 
   .hamburger {
@@ -167,6 +177,10 @@ header {
       border-radius: 5px;
       background: #fff;
     }
+  }
+
+  .hamburger.active {
+    transform: rotate(90deg);
   }
 
   nav {
@@ -213,6 +227,10 @@ header {
     }
   }
 
+  nav.active{
+    left: 0;
+  }
+
   .rad-star {
     color: #f06c64;
   }
@@ -224,24 +242,6 @@ header {
     .hamburger {
       visibility: visible;
       z-index: 999;
-    }
-
-    .hamburger.active {
-      transform: rotate(90deg);
-    }
-
-    .logo_active{
-      left: -10px;
-    }
-
-    .nav_active{
-      left: 0;
-    }
-
-    .overlay-nav-menu_active {
-      display: block;
-      height: 100vh;
-      z-index: 99;
     }
 
     nav {
@@ -413,6 +413,10 @@ header {
 
         @media screen and (max-width: 768px) {
           width: 35%;
+        }
+
+        @media screen and (max-width: 375px) {
+          width: 25%;
         }
       }
     }

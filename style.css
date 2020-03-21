@@ -113,6 +113,8 @@ header {
       color: #ffffff;
       padding-bottom: 6px;
       padding-left: 2px; }
+  header .logo.active {
+    left: -10px; }
   header .overlay-nav-menu {
     position: absolute;
     width: 100%;
@@ -123,6 +125,10 @@ header {
     opacity: 0.6;
     background: #2D303A;
     display: none; }
+  header .overlay-nav-menu.active {
+    display: block;
+    height: 100vh;
+    z-index: 99; }
   header .hamburger {
     height: 20px;
     left: 23px;
@@ -150,6 +156,9 @@ header {
       height: 2.4px;
       border-radius: 5px;
       background: #fff; }
+  header .hamburger.active {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
   header nav {
     width: 374px;
     text-transform: uppercase;
@@ -186,6 +195,8 @@ header {
         margin-top: 5px;
         border-radius: 50%;
         background: #494e62; }
+  header nav.active {
+    left: 0; }
   header .rad-star {
     color: #f06c64; }
   @media screen and (max-width: 375px) {
@@ -197,17 +208,6 @@ header {
       header .hamburger {
         visibility: visible;
         z-index: 999; }
-      header .hamburger.active {
-        -webkit-transform: rotate(90deg);
-                transform: rotate(90deg); }
-      header .logo_active {
-        left: -10px; }
-      header .nav_active {
-        left: 0; }
-      header .overlay-nav-menu_active {
-        display: block;
-        height: 100vh;
-        z-index: 99; }
       header nav {
         position: absolute;
         top: 0;
@@ -365,6 +365,9 @@ header {
         @media screen and (max-width: 768px) {
           .container .slider .slide-2 .box {
             width: 35%; } }
+        @media screen and (max-width: 375px) {
+          .container .slider .slide-2 .box {
+            width: 25%; } }
   .container .arrow {
     position: absolute;
     top: 50%;

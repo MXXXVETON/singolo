@@ -44,9 +44,9 @@ const burgermenu = () => {
 
   humburgerMenu.addEventListener('click', (e) => {
     humburgerMenu.classList.toggle('active')
-    logo.classList.toggle('logo_active')
-    nav.classList.toggle('nav_active')
-    overlayMenuNav.classList.toggle('overlay-nav-menu_active')
+    logo.classList.toggle('active')
+    nav.classList.toggle('active')
+    overlayMenuNav.classList.toggle('active')
   })
 }
 
