@@ -136,6 +136,10 @@ header {
     }
   }
 
+  .logo.active{
+    left: -10px;
+  }
+
   .overlay-nav-menu {
     position: absolute;
     width: 100%;
@@ -146,6 +150,12 @@ header {
     opacity: 0.6;
     background: #2D303A;
     display: none;
+  }
+
+  .overlay-nav-menu.active {
+    display: block;
+    height: 100vh;
+    z-index: 99;
   }
 
   .hamburger {
@@ -167,6 +177,10 @@ header {
       border-radius: 5px;
       background: #fff;
     }
+  }
+
+  .hamburger.active {
+    transform: rotate(90deg);
   }
 
   nav {
@@ -213,35 +227,21 @@ header {
     }
   }
 
+  nav.active{
+    left: 0;
+  }
+
   .rad-star {
     color: #f06c64;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 480px) {
     padding: 1.3em 0;
     justify-content: center;
 
     .hamburger {
       visibility: visible;
       z-index: 999;
-    }
-
-    .hamburger.active {
-      transform: rotate(90deg);
-    }
-
-    .logo_active{
-      left: -10px;
-    }
-
-    .nav_active{
-      left: 0;
-    }
-
-    .overlay-nav-menu_active {
-      display: block;
-      height: 100vh;
-      z-index: 99;
     }
 
     nav {
@@ -414,6 +414,10 @@ header {
         @media screen and (max-width: 768px) {
           width: 35%;
         }
+
+        @media screen and (max-width: 375px) {
+          width: 25%;
+        }
       }
     }
   }
@@ -579,6 +583,7 @@ header {
                           "a a a"
                           "a a a"
                           "a a a";
+      grid-gap: 0;
     }
 
     @media screen and (max-width: 375px) {
@@ -586,6 +591,7 @@ header {
                           "a a"
                           "a a"
                           "a a";
+      grid-gap: 0;
     }
 
     .work-item {
@@ -626,7 +632,7 @@ header {
     grid-template-areas: "a a a";
     grid-gap: 20px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 480px) {
       grid-template-areas: "a";
     }
   }
@@ -663,9 +669,13 @@ header {
 
   .persone-item__social {
     width: 152px;
-    padding-top: 1px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    
+    @media screen and (max-width: 568px) {
+      width: 100%;
+      justify-content: space-around;
+    }
   }
   }
 

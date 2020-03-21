@@ -44,9 +44,9 @@ const burgermenu = () => {
 
   humburgerMenu.addEventListener('click', (e) => {
     humburgerMenu.classList.toggle('active')
-    logo.classList.toggle('logo_active')
-    nav.classList.toggle('nav_active')
-    overlayMenuNav.classList.toggle('overlay-nav-menu_active')
+    logo.classList.toggle('active')
+    nav.classList.toggle('active')
+    overlayMenuNav.classList.toggle('active')
   })
 }
 
@@ -231,11 +231,11 @@ const openModalWindow = () => {
 
   if (subject === '') {
     subject = 'No subject'
-  } else {subject}
+  }
 
   if (describe === '') {
     describe = 'No description'
-  } else {describe}
+  }
 
   modal.insertAdjacentHTML("beforeend", `<p class="modal__aception">The letter was sent</p>`);
   modal.insertAdjacentHTML("beforeend", `<p class="modal__mail-title">${subject}</p>`);
