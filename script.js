@@ -2,9 +2,6 @@ window.onload = function() {
   // MENU NAV
   addNavClickHandler()
 
-  // form
-  formRequest()
-
   //CAROUSEL
   carousel()
   tapOnPhone()
@@ -15,6 +12,9 @@ window.onload = function() {
   // PORTFOLIO rendor default content
   rendorPartfolioItem()
   addBorderByItem()
+
+  // form
+  formRequest()
 }
 
 // Main menu
@@ -23,12 +23,12 @@ const addNavClickHandler = () => {
   let menu = document.querySelector('#menu')
 
   menu.addEventListener('click', (e) => {
-    menu.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
+    menu.querySelectorAll('li>a').forEach((el) => {
+      el.classList.remove('active')
+    })
+
     e.target.classList.add('active')
 
-
-
-    document.body.style.overflow = 'auto'
   })
 
   burgermenu()
@@ -47,9 +47,6 @@ const burgermenu = () => {
     logo.classList.toggle('logo_active')
     nav.classList.toggle('nav_active')
     overlayMenuNav.classList.toggle('overlay-nav-menu_active')
-
-    // change on other click
-    document.body.style.overflow = 'hidden'
   })
 }
 
@@ -260,30 +257,28 @@ const openModalWindow = () => {
   document.body.style.overflow = 'hidden'
 };
 
-
-
 const tapOnPhone = () => {
   let centralPhone =  document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-2 > div > div.phone-center > img")
-  // let phoneVertical = document.querySelector("")
-  // let phoneHorizontal = document.querySelector("")
+  let phoneVertical = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-vert > img")
+  let phoneHorizontal = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-horiz > img")
   
   let centralPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-2 > div > div.phone-center > div")
-  // let vertPhoneOffScreen = document.querySelector("")
-  // let horizontalPhoneOffScreen = document.querySelector("")
+  let vertPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-vert > div")
+  let horizontalPhoneOffScreen = document.querySelector("body > div > div.bg-pink.pt-1 > div.container > div.carousel > div > section.slide-1 > div.phone.phone-horiz > div")
 
 
   centralPhone.addEventListener('click', () => {
     centralPhoneOffScreen.classList.toggle("active")
   })
 
-  // phoneVertical.addEventListener('click', () => {
-  //   vertPhoneOffScreen.classList.toggle("active")
-  // })
+  phoneVertical.addEventListener('click', () => {
+    vertPhoneOffScreen.classList.toggle("active")
+  })
 
-  // phoneHorizontal.addEventListener('click', () => {
-  //   horizontalPhoneOffScreen.classList.toggle("active")
-  // })
-}
+  phoneHorizontal.addEventListener('click', () => {
+    horizontalPhoneOffScreen.classList.toggle("active")
+  })
+};
 
 
 // const navByScrolling = () => {
@@ -305,63 +300,4 @@ const tapOnPhone = () => {
 //       }
 //     })
 //   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FORM return MODALwindow
-// document.querySelector('.submit-btn').addEventListener('click', (e) => {
-//   let formEmail = document.querySelector("#email").value
-//   let formName = document.querySelector("#name").value
-  
-//   e.preventDefault()
-//   onSubmitGetValue()
-// })
-
-// // MODAL content
-// const onSubmitGetValue = () => {
-//   let formDataSubject = document.querySelector("#subject").value
-//   let formDataText = document.querySelector("#describe").value
-//   let modal = document.querySelector('.modal')
-
-//   while(modal.firstChild) {
-//     modal.removeChild(modal.firstChild);
-//   }
-
-//   if (formDataSubject === '') {
-//     formDataSubject = 'Без темы'
-//   } else {formDataSubject}
-
-//   if (formDataText === '') {
-//     formDataText = 'Без описания'
-//   } else {formDataText}
-
-//   modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__aception">Письмо отправлено</p> <br>`)
-//   modal.insertAdjacentHTML("beforeend", `<p lang="ru-en" class="modal__mail-title">Тема: ${formDataSubject}</p>`)
-//   modal.insertAdjacentHTML("beforeend", `<p lang="ru-en class="modal__mail-text">Описание: ${formDataText}</p>`)
-//   modal.insertAdjacentHTML("beforeend", `<button id="modal__btn">OK</button>`)
-
-
-//   document.querySelector('.overlay').style.visibility = 'visible'
-  
-
-//   document.querySelector('#modal__btn').addEventListener('click', () => {
-  
-//     document.querySelector('.overlay').style.visibility = 'hidden'
-//     document.body.style.overflow = 'auto'
-    
-//   })
-
-//   document.body.style.overflow = 'hidden'
 // }

@@ -70,7 +70,7 @@ p {
   padding: 0 40px;
 
   @media screen and (max-width: 375px ){
-    padding: 0 30px;
+    padding: 0 25px;
   }
 }
 
@@ -83,6 +83,10 @@ p {
 
 .pt-1 {
   padding-top: 100px;
+
+  @media screen and (max-width:375px) {
+    padding-top: 80px;
+  }
 }
 
 .bg-darkblue{
@@ -236,6 +240,8 @@ header {
 
     .overlay-nav-menu_active {
       display: block;
+      height: 100vh;
+      z-index: 99;
     }
 
     nav {
@@ -306,104 +312,48 @@ header {
     }
 
     .slide-1 {
+      padding: 0 40px;
 
       .phone {
         float: left;
         position: relative;
-        
-        .black-screen {
-          position: absolute;
-          content: '';
-          width: 190px;
-          height: 335px;
-          background: #000;
-          visibility: hidden;
 
-          @media screen and (max-width:768px) {
-            width: 142px;
-            height: 249px;
-          }
-
-          @media screen and (max-width: 375px) {
-            width: 72px;
-            height: 122px;
-          }
-        }
-
-        .black-screen.active {
-          visibility: visible;
+        img {
+          width: 100%;
         }
       }
 
       .phone-vert {
-        margin-right: 60px;
-        
         .black-screen {
-          top: 64px;
-          left: 13px;
-          // visibility: hidden;
-        }
-
-        @media screen and (max-width: 768px){
-          margin-right: 25px;
-
-          img {
-            width: 180px;
-            height: 360px;
-          }
-
-          .black-screen {
-            top: 48px;
-            left: 10px;
-          }
-        }
-
-        @media screen and (max-width: 375px){
-          margin-right: 10px;
-
-          img {
-            width: 90px;
-            height: 177px;
-          }
-
-          .black-screen {
-            top: 24px;
-            left: 5px;
-          }
+          position: absolute;
+          content: '';
+          background: #000;
+          width: 79%;
+          height: 68.7%;
+          top: 13%;
+          left: 5.4%;
+          visibility: hidden;
         }
       }
 
       .phone-horiz {
+        margin-left: 10%;
+
         .black-screen {
-          top: -60px;
-          right: 162px;
-          transform: rotate(90deg);
-          // visibility: hidden;
+          position: absolute;
+          content: '';
+          background: #000;
+          width: 70%;
+          height: 78%;
+          top: 5%;
+          left: 12%;
+          visibility: hidden;
         }
+      }
 
-        @media screen and (max-width: 768px){
-          img {
-            width: 360px;
-            height: 180px;
-          }
-
-          .black-screen {
-            top: -43px;
-            left: 98px;
-          }
-        }
-
-        @media screen and (max-width: 375px){
-          img {
-            width: 177px;
-            height: 88px;
-          }
-
-          .black-screen {
-            top: -22px;
-            left: 48px;
-          }
-        }
+      .black-screen.active,
+      .black-screen.active {
+        visibility: visible;
       }
     }
 
@@ -492,15 +442,11 @@ header {
   }
 
   @media screen and (max-width: 768px) {
-    .container {
-      height: 447px;
-    }
+    height: 447px;
   }
 
   @media screen and (max-width: 375px) {
-    .container {
-      height: 220px;
-    }
+    height: 220px;
   }
 }
 
@@ -606,6 +552,16 @@ header {
     .active {
       border-color: #BBBBBB;
       color: #BBBBBB;
+    }
+
+    @media screen and (max-width: 375px) {
+      flex-wrap: wrap;
+      width: auto;
+    }
+
+    .tag{
+      display: block;
+      margin-top: 5px;
     }
   }
 
