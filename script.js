@@ -1,65 +1,49 @@
 window.onload = function() {
-  // Main menu
-  navByScrolling()
+  // MENU NAV
   addNavClickHandler()
 
-  // hamburger
-  burgermenu()
+  // HAMBURGER
+  
 
-  // // Courusel
+  //CAROUSEL
   carousel()
+  tapOnPhone()
 
   // TAGS
   addTagsClickHandler()
 
-  // PORTFOLIO rendor content 0
+  // PORTFOLIO rendor default content
   rendorPartfolioItem()
-
   addBorderByItem()
 }
 
 // Main menu
 const addNavClickHandler = () => {
+  
   let menu = document.querySelector('#menu')
 
   menu.addEventListener('click', (e) => {
     menu.querySelectorAll('li>a').forEach(el => el.classList.remove('active'))
     e.target.classList.add('active')
 
+
+
     document.body.style.overflow = 'auto'
   })
-}
 
-const navByScrolling = () => {
-  document.addEventListener('scroll', onScroll)
-
-  function onScroll(e) {
-    let currPos = window.scrollY
-    let menuSection = document.querySelectorAll('div.main>section')
-    let menu = document.querySelectorAll('li a')
-  
-    menuSection.forEach((item) => {
-      if (item.offsetTop <= currPos && (item.offsetTop + item.offsetHeight) > currPos)  {
-        menu.forEach((el) => {
-          el.classList.remove('active')
-          if(item.getAttribute('id') === el.getAttribute('href').substring(1)) {
-            el.classList.add('active')
-          }
-        })
-      }
-    })
-  }
+  burgermenu()
 }
 
 //  MENU HAMBURGER
 const burgermenu = () => {
-  let burgermenu = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > div.hamburger")
+  let humburgerMenu = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > div.hamburger")
   let logo = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > section")
   let nav = document.querySelector("body > div > div:nth-child(1) > div.content-wrapper > header > nav")
   let overlayMenuNav = document.querySelector(".overlay-nav-menu")
 
-  burgermenu.addEventListener('click', (e) => {
-    burgermenu.classList.toggle('active')
+
+  humburgerMenu.addEventListener('click', (e) => {
+    humburgerMenu.classList.toggle('active')
     logo.classList.toggle('logo_active')
     nav.classList.toggle('nav_active')
     overlayMenuNav.classList.toggle('overlay-nav-menu_active')
@@ -69,7 +53,7 @@ const burgermenu = () => {
   })
 }
 
-// // Courusel
+// CAROUSEL
 const carousel = () => {
   const carousel = document.querySelector('.carousel');
   const slider = document.querySelector('.slider');
@@ -89,7 +73,7 @@ const carousel = () => {
       slider.appendChild(slider.firstElementChild);
     }
     carousel.style.justifyContent = 'flex-end';    
-    slider.style.transform = 'translate(-50%)';  
+    slider.style.transform = 'translate(50%)';  
   });
 
   slider.addEventListener('transitionend', function() {
@@ -107,7 +91,7 @@ const carousel = () => {
   }, false);
 }
 
-// potfolio, portfolio TAGS, portfolio item...
+// PARTFOLIO
 const addTagsClickHandler = () => {
   document.querySelector('.portfolio__tags-menu').addEventListener('click', (e) => {
     if( e.target.classList.contains('tag') ) {
@@ -215,7 +199,7 @@ const addBorderByItem = ()=>{
   })
 }
 
-// Form return MODALwindow
+// FORM return MODALwindow
 document.querySelector('.submit-btn').addEventListener('click', (e) => {
   let formEmail = document.querySelector("#email").value
   let formName = document.querySelector("#name").value
@@ -226,7 +210,7 @@ document.querySelector('.submit-btn').addEventListener('click', (e) => {
 
 })
 
-// Modal content
+// MODAL content
 const onSubmitGetValue = () => {
   let formDataSubject = document.querySelector("#subject").value
   let formDataText = document.querySelector("#describe").value
@@ -263,3 +247,46 @@ const onSubmitGetValue = () => {
   document.body.style.overflow = 'hidden'
 }
 
+const tapOnPhone =  () => {
+  let centralPhone =  document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-2 > div > div.phone-center")
+  let offScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-2 > div > div.phone-center > div")
+  let phoneVertical = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-vert")
+  let phoneHorizontal = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-horiz")
+  let vertOffScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-vert > span.black-screen")
+  let horizontalOffScreen = document.querySelector("body > div > div:nth-child(2) > div.content-wrapper.padding-0 > div > div.carousel > div > section.slide-1 > div.phone.phone-horiz > span.black-screen")
+
+
+  centralPhone.addEventListener('click', () => {
+    offScreen.classList.toggle("active")
+  })
+
+  phoneVertical.addEventListener('click', () => {
+    vertOffScreen.classList.toggle("active")
+  })
+
+  phoneHorizontal.addEventListener('click', () => {
+    horizontalOffScreen.classList.toggle("active")
+  })
+}
+
+
+// const navByScrolling = () => {
+//   document.addEventListener('scroll', onScroll)
+
+//   function onScroll(e) {
+//     let currPos = window.scrollY
+//     let menuSection = document.querySelectorAll('div.main>section')
+//     let menu = document.querySelectorAll('li a')
+  
+//     menuSection.forEach((item) => {
+//       if (item.offsetTop <= currPos && (item.offsetTop + item.offsetHeight) > currPos)  {
+//         menu.forEach((el) => {
+//           el.classList.remove('active')
+//           if(item.getAttribute('id') === el.getAttribute('href').substring(1)) {
+//             el.classList.add('active')
+//           }
+//         })
+//       }
+//     })
+//   }
+// }
