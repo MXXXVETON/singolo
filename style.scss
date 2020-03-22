@@ -449,7 +449,7 @@ header {
     height: 447px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 445px) {
     height: 220px;
   }
 }
@@ -479,7 +479,7 @@ header {
       grid-template-areas: "a a";
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 550px) {
       grid-template-areas: "a";
     }
   }
@@ -510,6 +510,10 @@ header {
         font-size: 18px;
       }
     }
+  }
+
+  @media screen and (max-width: 375px) {
+    padding-top: 25px;
   }
 }
 
@@ -575,7 +579,7 @@ header {
                         "a a a a"
                         "a a a a";
     grid-gap: 10px;
-    margin: 0 auto;
+    margin: 0 -5px;
     overflow: hidden;
 
     @media screen and (max-width: 768px) {
@@ -596,6 +600,9 @@ header {
 
     .work-item {
       cursor: pointer;
+      &:nth-of-type(n+13) {
+        display: none;
+      }
 
       img {
         width: 100%;
@@ -604,6 +611,12 @@ header {
 
       .active {
         border: solid 5px #F06C64;
+      }
+
+      @media screen and (max-width: 375px) {
+        &:nth-of-type(n+9) {
+          display: none;
+        }
       }
     }
 
@@ -656,28 +669,20 @@ header {
   }
 
   .persone-item__short-info {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.7;
     margin-bottom: 25px;
     color: #767e9e;
-    text-align: justify;
     letter-spacing: -0.1px;
     height: 40px;
     overflow: hidden;
   }
 
   .persone-item__social {
-    width: 152px;
     display: flex;
     justify-content: space-between;
-    
-    @media screen and (max-width: 568px) {
-      width: 100%;
-      justify-content: space-around;
-    }
+    width: 100%;
+    max-width: 156px;
   }
-  }
+}
 
 .form-quote {
   background: #f06c64;
@@ -821,14 +826,14 @@ header {
       border-radius: 5px;
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 550px) {
       .submit-btn {
         width: 100%;
       }
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 550px) {
     &__wrapper {
       flex-direction: column;
     }
