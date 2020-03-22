@@ -113,18 +113,18 @@ const addClickedTag = (clickedTag) => {
 
 const rendorPartfolioItem = () => {
   const arrImages =  [
-    './asets/portfolio-works/Project.png',
-    './asets/portfolio-works/Project-3.png',
-    './asets/portfolio-works/Project-10.png',
-    './asets/portfolio-works/Project-5.png',
-    './asets/portfolio-works/Project-1.png',
-    './asets/portfolio-works/Project-4.png',
-    './asets/portfolio-works/Project-11.png',
-    './asets/portfolio-works/Project-9.png',
-    './asets/portfolio-works/Project-2.png',
-    './asets/portfolio-works/Project-7.png',
-    './asets/portfolio-works/Project-6.png',
-    './asets/portfolio-works/Project-8.png'
+    './assets/portfolio-works/Project.png',
+    './assets/portfolio-works/Project-3.png',
+    './assets/portfolio-works/Project-10.png',
+    './assets/portfolio-works/Project-5.png',
+    './assets/portfolio-works/Project-1.png',
+    './assets/portfolio-works/Project-4.png',
+    './assets/portfolio-works/Project-11.png',
+    './assets/portfolio-works/Project-9.png',
+    './assets/portfolio-works/Project-2.png',
+    './assets/portfolio-works/Project-7.png',
+    './assets/portfolio-works/Project-6.png',
+    './assets/portfolio-works/Project-8.png'
   ];
  
   function addNewWorkList (arrayWithImagePath) {
@@ -149,18 +149,18 @@ const rendorPartfolioItem = () => {
 
 const rendorRandomItem = () => {
   const arrImages =  [
-    './asets/portfolio-works/Project.png',
-    './asets/portfolio-works/Project-3.png',
-    './asets/portfolio-works/Project-10.png',
-    './asets/portfolio-works/Project-5.png',
-    './asets/portfolio-works/Project-1.png',
-    './asets/portfolio-works/Project-4.png',
-    './asets/portfolio-works/Project-11.png',
-    './asets/portfolio-works/Project-9.png',
-    './asets/portfolio-works/Project-2.png',
-    './asets/portfolio-works/Project-7.png',
-    './asets/portfolio-works/Project-6.png',
-    './asets/portfolio-works/Project-8.png'
+    './assets/portfolio-works/Project.png',
+    './assets/portfolio-works/Project-3.png',
+    './assets/portfolio-works/Project-10.png',
+    './assets/portfolio-works/Project-5.png',
+    './assets/portfolio-works/Project-1.png',
+    './assets/portfolio-works/Project-4.png',
+    './assets/portfolio-works/Project-11.png',
+    './assets/portfolio-works/Project-9.png',
+    './assets/portfolio-works/Project-2.png',
+    './assets/portfolio-works/Project-7.png',
+    './assets/portfolio-works/Project-6.png',
+    './assets/portfolio-works/Project-8.png'
   ];
 
   let newArr = arrImages.sort(function() {

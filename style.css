@@ -384,7 +384,7 @@ header {
   @media screen and (max-width: 768px) {
     .container {
       height: 447px; } }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 445px) {
     .container {
       height: 220px; } }
 
@@ -411,7 +411,7 @@ header {
     @media screen and (max-width: 768px) {
       .services__menu {
         grid-template-areas: "a a"; } }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 550px) {
       .services__menu {
         grid-template-areas: "a"; } }
   .services .menu-list {
@@ -442,6 +442,9 @@ header {
         margin-bottom: 3px;
         font-weight: 900;
         font-size: 18px; }
+  @media screen and (max-width: 375px) {
+    .services {
+      padding-top: 25px; } }
 
 .portfolio {
   background: #2d303a;
@@ -490,7 +493,7 @@ header {
     display: grid;
     grid-template-areas: "a a a a" "a a a a" "a a a a";
     grid-gap: 10px;
-    margin: 0 auto;
+    margin: 0 -5px;
     overflow: hidden; }
     @media screen and (max-width: 768px) {
       .portfolio__work {
@@ -502,11 +505,16 @@ header {
         grid-gap: 0; } }
     .portfolio__work .work-item {
       cursor: pointer; }
+      .portfolio__work .work-item:nth-of-type(n+13) {
+        display: none; }
       .portfolio__work .work-item img {
         width: 100%;
         border: solid 5px transparent; }
       .portfolio__work .work-item .active {
         border: solid 5px #F06C64; }
+      @media screen and (max-width: 375px) {
+        .portfolio__work .work-item:nth-of-type(n+9) {
+          display: none; } }
 
 .about-us {
   display: -webkit-box;
@@ -543,28 +551,20 @@ header {
     font-size: 18px;
     line-height: 18px; }
   .about-us .persone-item__short-info {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.7;
     margin-bottom: 25px;
     color: #767e9e;
-    text-align: justify;
     letter-spacing: -0.1px;
     height: 40px;
     overflow: hidden; }
   .about-us .persone-item__social {
-    width: 152px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    @media screen and (max-width: 568px) {
-      .about-us .persone-item__social {
-        width: 100%;
-        -ms-flex-pack: distribute;
-            justify-content: space-around; } }
+            justify-content: space-between;
+    width: 100%;
+    max-width: 156px; }
 
 .form-quote {
   background: #f06c64;
@@ -694,10 +694,10 @@ header {
       background: #FBC65F;
       color: wheat;
       border-radius: 5px; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 550px) {
       .form-quote #getQuote .submit-btn {
         width: 100%; } }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 550px) {
     .form-quote__wrapper {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
